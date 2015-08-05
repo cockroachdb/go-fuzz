@@ -44,11 +44,7 @@ func (nullEnv) Get(_ string) (parser.Datum, bool) {
 
 var env = nullEnv{}
 
-func expected(err error) bool {
-	if err == nil {
-		return true
-	}
-	str := err.Error()
+func expected(str string) bool {
 	for _, substr := range []string{
 		"ParseFloat",
 		"unknown function",
@@ -60,9 +56,9 @@ func expected(err error) bool {
 		"operator",      // unsupported (unary|binary|...) operator
 		"not supported", // octal, [...] not supported
 		"TODO",          // TODO(pmattis): LIKE unimplemented (etc)
-		"eval: unsupported expression type: *parser.StarExpr", // #1948
 		"unexpected expression",
-		// "unimplemented",
+		"eval: unsupported expression type: *parser.StarExpr", // #1948
+		"walk: unsupported expression type: <nil>",            // #1949
 
 		// past trophies:
 		// `DATABASE`,                    // # 1818
@@ -78,6 +74,23 @@ func expected(err error) bool {
 }
 
 func fuzzSingle(stmt parser.Statement) (interestingness int) {
+	var lastExpr parser.Expr
+	rcvr := func() {
+		if r := recover(); r != nil {
+			if !expected(fmt.Sprintf("%v", r)) {
+				fmt.Printf("Stmt: %s\n%s", stmt, spew.Sdump(stmt))
+				if lastExpr != nil {
+					fmt.Printf("Expr: %s", spew.Sdump(lastExpr))
+				}
+				panic(r)
+			}
+			// Anything that has expected errors in it is fine, but not as
+			// interesting as things that go through.
+			interestingness = 1
+		}
+	}
+	defer rcvr()
+
 	data0 := stmt.String()
 	// TODO(tschottdorf): again, this is since we're ignoring stuff in the
 	// grammar instead of erroring out on unsupported language. See:
@@ -86,15 +99,13 @@ func fuzzSingle(stmt parser.Statement) (interestingness int) {
 		return 0
 	}
 	stmt1, err := parser.Parse(data0)
-	if !expected(err) {
+	if err != nil {
 		fmt.Printf("AST: %s", spew.Sdump(stmt))
 		fmt.Printf("data0: %q\n", data0)
 		panic(err)
 	}
 	interestingness = 2
-	if err != nil {
-		return
-	}
+
 	data1 := stmt1.String()
 	// TODO(tschottdorf): due to the ignoring issue again.
 	// if !reflect.DeepEqual(stmt, stmt1) {
@@ -107,14 +118,9 @@ func fuzzSingle(stmt parser.Statement) (interestingness int) {
 	}
 
 	var v visitorFunc = func(e parser.Expr) parser.Expr {
-		_, err := parser.EvalExpr(e, env)
-		if !expected(err) {
-			fmt.Printf("Expr: %s", spew.Sdump(e))
+		lastExpr = e
+		if _, err := parser.EvalExpr(e, env); err != nil {
 			panic(err)
-		} else if err != nil {
-			// Anything that has expected errors in it is fine, but not as
-			// interesting as things that go through.
-			interestingness = 1
 		}
 		return e
 	}
