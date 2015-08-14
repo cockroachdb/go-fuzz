@@ -36,18 +36,11 @@ func Fuzz(data []byte) (interestingness int) {
 	return
 }
 
-type nullEnv struct{}
-
-func (nullEnv) Get(_ string) (parser.Datum, bool) {
-	return parser.DNull{}, true
-}
-
-var env = nullEnv{}
-
 func expected(str string) bool {
 	for _, substr := range []string{
 		"ParseFloat",
 		"unknown function",
+		"unknown signature",
 		"cannot convert",
 		"zero modulus",
 		"incorrect number",
@@ -55,10 +48,10 @@ func expected(str string) bool {
 		"unexpected expression",
 		"operator",      // unsupported (unary|binary|...) operator
 		"not supported", // octal, [...] not supported
+		"not found",     // qualified name "X" not found
 		"TODO",          // TODO(pmattis): LIKE unimplemented (etc)
 		"unexpected expression",
-		"eval: unsupported expression type: *parser.StarExpr", // #1948
-		"walk: unsupported expression type: <nil>",            // #1949
+		"walk: unsupported expression type: <nil>", // #1949
 
 		// past trophies:
 		// `DATABASE`,                    // # 1818
@@ -119,7 +112,7 @@ func fuzzSingle(stmt parser.Statement) (interestingness int) {
 
 	var v visitorFunc = func(e parser.Expr) parser.Expr {
 		lastExpr = e
-		if _, err := parser.EvalExpr(e, env); err != nil {
+		if _, err := parser.EvalExpr(e); err != nil {
 			panic(err)
 		}
 		return e
