@@ -1,11 +1,15 @@
+// Copyright 2015 Dmitry Vyukov. All rights reserved.
+// Use of this source code is governed by Apache 2 LICENSE that can be found in the LICENSE file.
+
 // +build darwin linux freebsd
+// +build gofuzz
 
 package gofuzzdep
 
 import (
 	"syscall"
 
-	. "github.com/dvyukov/go-fuzz/go-fuzz-defs"
+	. "go-fuzz-defs"
 )
 
 type FD int

@@ -1,4 +1,7 @@
-// This file needs to be copied somewhere into GOROOT/src,
+// Copyright 2015 Dmitry Vyukov. All rights reserved.
+// Use of this source code is governed by Apache 2 LICENSE that can be found in the LICENSE file.
+
+// This file needs to be copied to GOROOT/src/cmd/asm/fuzz/fuzz.go,
 // otherwise it will fail to import internal packages.
 // Also apply the following patch to std lib:
 
@@ -12,7 +15,6 @@ index c07e6f8..d39cb47 100644
  import (
         "fmt"
 -       "log"
-+       //"log"
         "os"
         "strconv"
         "text/scanner"
@@ -22,7 +24,6 @@ index c07e6f8..d39cb47 100644
         if p.errorCount > 10 {
 -               log.Fatal("too many errors")
 +               panic("os.Exit")
-+               //log.Fatal("too many errors")
         }
  }
  
@@ -36,9 +37,7 @@ index 7e495b8..45e9b8d 100644
  func (in *Input) Error(args ...interface{}) {
 -       fmt.Fprintf(os.Stderr, "%s:%d: %s", in.File(), in.Line(), fmt.Sprintln(args...))
 -       os.Exit(1)
-+       //fmt.Fprintf(os.Stderr, "%s:%d: %s", in.File(), in.Line(), fmt.Sprintln(args...))
 +       panic("os.Exit")
-+       //os.Exit(1)
  }
 */
 

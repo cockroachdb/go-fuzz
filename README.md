@@ -145,6 +145,12 @@ Then run one or more slave processes as:
 $ go-fuzz -bin=./png-fuzz.zip -slave=127.0.0.1:8745 -procs=10
 ```
 
+## External Articles
+
+- [go-fuzz github.com/arolek/ase](https://medium.com/@dgryski/go-fuzz-github-com-arolek-ase-3c74d5a3150c): A step-by-step tutorial
+- [DNS parser, meet Go fuzzer](https://blog.cloudflare.com/dns-parser-meet-go-fuzzer/): A success story with suggestions on how to write the ```Fuzz``` function
+- [Automated Testing with go-fuzz](https://speakerdeck.com/filosottile/automated-testing-with-go-fuzz)
+
 ## Credits and technical details
 
 Go-fuzz fuzzing logic is heavily based on [american fuzzy lop](http://lcamtuf.coredump.cx/afl/),
@@ -158,39 +164,58 @@ by go-fuzz are inspired by work done by Mateusz Jurczyk, Gynvael Coldwind and
 
 - [spec: non-integral constant can be converted to int](https://github.com/golang/go/issues/11350) **fixed**
 - [cmd/compile: out of fixed registers](https://github.com/golang/go/issues/11352)
-- [cmd/compile: truncates constants](https://github.com/golang/go/issues/11326)
+- [cmd/compile: truncates constants](https://github.com/golang/go/issues/11326) **fixed**
 - [cmd/compile: overflow in int -> string](https://github.com/golang/go/issues/11330)
 - [cmd/compile: bad HMUL](https://github.com/golang/go/issues/11358) **fixed**
 - [cmd/compile: treecopy Name](https://github.com/golang/go/issues/11361)
-- [cmd/compile: accepts invalid identifiers](https://github.com/golang/go/issues/11359)
+- [cmd/compile: accepts invalid identifiers](https://github.com/golang/go/issues/11359) **fixed**
 - [cmd/compile: hangs compiling hex fp constant](https://github.com/golang/go/issues/11364)
 - [cmd/compile: mishandles int->complex conversion](https://github.com/golang/go/issues/11365)
-- [cmd/compile: allows to define blank methods on builtin types](https://github.com/golang/go/issues/11366)
+- [cmd/compile: allows to define blank methods on builtin types](https://github.com/golang/go/issues/11366) **fixed**
 - [cmd/compile: mis-calculates a constant](https://github.com/golang/go/issues/11369) **fixed**
-- [cmd/compile: interface conversion panic](https://github.com/golang/go/issues/11540)
+- [cmd/compile: interface conversion panic](https://github.com/golang/go/issues/11540) **fixed**
 - [cmd/compile: nil pointer dereference](https://github.com/golang/go/issues/11588) **fixed**
 - [cmd/compile: nil pointer dereference (2)](https://github.com/golang/go/issues/11666) **fixed**
 - [cmd/compile: internal compiler error: plain block b3 len(Succs)==2, want 1](https://github.com/golang/go/issues/11589) **fixed**
 - [cmd/compile: internal compiler error: b3.Succs has duplicate block b3](https://github.com/golang/go/issues/11593) **fixed**
-- [cmd/compile: internal compiler error: newname nil](https://github.com/golang/go/issues/11610)
+- [cmd/compile: internal compiler error: newname nil](https://github.com/golang/go/issues/11610) **fixed**
 - [cmd/compile: accepts invalid function type](https://github.com/golang/go/issues/11595)
-- [cmd/compile: internal compiler error: getinarg: not a func int](https://github.com/golang/go/issues/11596)
+- [cmd/compile: internal compiler error: getinarg: not a func int](https://github.com/golang/go/issues/11596) **fixed**
 - [cmd/compile: hangs converting int const to complex64](https://github.com/golang/go/issues/11597)
-- [cmd/compile: nil deref in error message](https://github.com/golang/go/issues/11614)
+- [cmd/compile: nil deref in error message](https://github.com/golang/go/issues/11614) **fixed**
 - [cmd/compile: use of untyped nil in switch](https://github.com/golang/go/issues/11668) **fixed**
-- [cmd/compile: implicitly converts complex constant to integer](https://github.com/golang/go/issues/11669)
+- [cmd/compile: implicitly converts complex constant to integer](https://github.com/golang/go/issues/11669) **fixed**
 - [cmd/compile: assignment to entry in nil map](https://github.com/golang/go/issues/11670) **fixed**
 - [cmd/compile: does not diagnose constant division by zero](https://github.com/golang/go/issues/11674)
 - [cmd/compile: does not detect a missing return](https://github.com/golang/go/issues/11698)
-- [cmd/compile: symbol ""._.args_stackmap listed multiple times](https://github.com/golang/go/issues/11699)
-- [cmd/asm: index out of range](https://github.com/golang/go/issues/11759)
-- [cmd/asm: slice bounds out of range](https://github.com/golang/go/issues/11760)
-- [cmd/asm: hang](https://github.com/golang/go/issues/11764)
-- [cmd/asm: nil deref](https://github.com/golang/go/issues/11765)
-- [internal/trace: index out of range](https://github.com/golang/go/issues/11766)
-- [internal/trace: index out of range (2)](https://github.com/golang/go/issues/11769)
-- [internal/trace: nil deref](https://github.com/golang/go/issues/11767)
-- [internal/trace: nil deref (2)](https://github.com/golang/go/issues/11770)
+- [cmd/compile: symbol ""._.args_stackmap listed multiple times](https://github.com/golang/go/issues/11699) **fixed**
+- [cmd/compile: "0"[0] should not be a constant](https://github.com/golang/go/issues/11370)
+- [cmd/compile: unexpected %!(NOVERB)](https://github.com/golang/go/issues/13266) **fixed**
+- [cmd/compile: wrong line number in error message](https://github.com/golang/go/issues/13267) **fixed**
+- [cmd/compile: not-deterministic output](https://github.com/golang/go/issues/13268)
+- [cmd/compile: parsing problem](https://github.com/golang/go/issues/13270) **fixed**
+- [cmd/compile: compiles incorrect program](https://github.com/golang/go/issues/13272) **fixed**
+- [cmd/compile: does not compile correct program](https://github.com/golang/go/issues/13273)
+- [cmd/compile: compiles incorrect program (2)](https://github.com/golang/go/issues/13274) **fixed**
+- [cmd/asm: index out of range](https://github.com/golang/go/issues/11759) **fixed**
+- [cmd/asm: index out of range (2)](https://github.com/golang/go/issues/12466) **fixed**
+- [cmd/asm: index out of range (3)](https://github.com/golang/go/issues/12467) **fixed**
+- [cmd/asm: index out of range (4)](https://github.com/golang/go/issues/12657)
+- [cmd/asm: slice bounds out of range](https://github.com/golang/go/issues/11760) **fixed**
+- [cmd/asm: hang](https://github.com/golang/go/issues/11764) **fixed**
+- [cmd/asm: hang (2)](https://github.com/golang/go/issues/12469) **fixed**
+- [cmd/asm: hang (3)](https://github.com/golang/go/issues/12656) **fixed**
+- [cmd/asm: nil deref](https://github.com/golang/go/issues/11765) **fixed**
+- [cmd/asm: nil deref (2)](https://github.com/golang/go/issues/12468) **fixed**
+- [cmd/asm: nil deref (3)](https://github.com/golang/go/issues/12614) **fixed**
+- [cmd/asm: nil deref (4)](https://github.com/golang/go/issues/12627) **fixed**
+- [cmd/asm: nil deref (5)](https://github.com/golang/go/issues/12655)
+- [cmd/asm: cannot happen: slice col](https://github.com/golang/go/issues/12654) **fixed**
+- [cmd/asm: unactionable "invalid local variable type 0"](https://github.com/golang/go/issues/12658)
+- [internal/trace: index out of range](https://github.com/golang/go/issues/11766) **fixed**
+- [internal/trace: index out of range (2)](https://github.com/golang/go/issues/11769) **fixed**
+- [internal/trace: nil deref](https://github.com/golang/go/issues/11767) **fixed**
+- [internal/trace: nil deref (2)](https://github.com/golang/go/issues/11770) **fixed**
 - [fmt: Printf loops on invalid verb spec](https://github.com/golang/go/issues/10674) **fixed**
 - [fmt: incorrect overflow detection](https://github.com/golang/go/issues/10695) **fixed**
 - [fmt: index out of range](https://github.com/golang/go/issues/10675) **fixed**
@@ -199,36 +224,40 @@ by go-fuzz are inspired by work done by Mateusz Jurczyk, Gynvael Coldwind and
 - [fmt: index out of range (4)](https://github.com/golang/go/issues/10771) **fixed**
 - [fmt: index out of range (5)](https://github.com/golang/go/issues/10945) **fixed**
 - [fmt: index out of range (6)](https://github.com/golang/go/issues/11376) **fixed**
-- [regexp: slice bounds out of range](https://github.com/golang/go/issues/11176)
-- [regexp: slice bounds out of range (2)](https://github.com/golang/go/issues/11178)
+- [regexp: slice bounds out of range](https://github.com/golang/go/issues/11176) **fixed**
+- [regexp: slice bounds out of range (2)](https://github.com/golang/go/issues/11178) **fixed**
 - [regexp: LiteralPrefix lies about completeness](https://github.com/golang/go/issues/11172)
 - [regexp: LiteralPrefix lies about completeness (2)](https://github.com/golang/go/issues/11175)
 - [regexp: POSIX regexp takes 4 seconds to execute](https://github.com/golang/go/issues/11181)
 - [regexp: confusing behavior on invalid utf-8 sequences](https://github.com/golang/go/issues/11185)
+- [regexp: considers "\Q\E*" as valid regexp](https://github.com/golang/go/issues/11187) **fixed**
 - [time: allows signs for year/tz in format string](https://github.com/golang/go/issues/11128)
 - [math/big: incorrect string->Float conversion](https://github.com/golang/go/issues/11341)
 - [net/http: can't send star request](https://github.com/golang/go/issues/11202) **fixed**
 - [net/http: allows empty header names](https://github.com/golang/go/issues/11205) **fixed**
-- [net/http: allows invalid characters in header values](https://github.com/golang/go/issues/11207)
+- [net/http: allows invalid characters in header values](https://github.com/golang/go/issues/11207) **fixed**
 - [net/http: allows %-encoding after \[\]](https://github.com/golang/go/issues/11208) **fixed**
-- [net/mail: ParseAddress/String corrupt address](https://github.com/golang/go/issues/11292)
+- [net/mail: ParseAddress/String corrupt address](https://github.com/golang/go/issues/11292) **fixed**
 - [net/mail: parses invalid address](https://github.com/golang/go/issues/11293) **fixed**
-- [net/mail: fails to escape address](https://github.com/golang/go/issues/11294)
-- [net/textproto: fails to trim header value](https://github.com/golang/go/issues/11204)
+- [net/mail: fails to escape address](https://github.com/golang/go/issues/11294) **fixed**
+- [net/textproto: fails to trim header value](https://github.com/golang/go/issues/11204) **fixed**
 - [archive/zip: cap out of range](https://github.com/golang/go/issues/10956) **fixed**
 - [archive/zip: bad file size](https://github.com/golang/go/issues/10957) **fixed**
 - [archive/zip: unexpected EOF](https://github.com/golang/go/issues/11144) **fixed**
 - [archive/zip: file with wrong checksum is successfully decompressed](https://github.com/golang/go/issues/11146) **fixed**
+- [archive/zip: unexpected EOF when reading archive](https://github.com/golang/go/issues/12449) **fixed**
 - [archive/tar: slice bounds out of range](https://github.com/golang/go/issues/10959) **fixed**
 - [archive/tar: slice bounds out of range (2)](https://github.com/golang/go/issues/10960) **fixed**
 - [archive/tar: slice bounds out of range (3)](https://github.com/golang/go/issues/10966) **fixed**
 - [archive/tar: slice bounds out of range (4)](https://github.com/golang/go/issues/10967) **fixed**
 - [archive/tar: slice bounds out of range (5)](https://github.com/golang/go/issues/11167) **fixed**
 - [archive/tar: deadly hang](https://github.com/golang/go/issues/10968) **fixed**
-- [archive/tar: invalid memory address or nil pointer dereference](https://github.com/golang/go/issues/11168)
+- [archive/tar: invalid memory address or nil pointer dereference](https://github.com/golang/go/issues/11168) **fixed**
+- [archive/tar: invalid memory address or nil pointer dereference (2)](https://github.com/golang/go/issues/12435) **fixed**
 - [archive/tar: Reader.Next returns nil header](https://github.com/golang/go/issues/11169) **fixed**
-- [archive/tar: eats file data](https://github.com/golang/go/issues/11170)
 - [archive/tar: Writer incorrectly encodes header data](https://github.com/golang/go/issues/11171)
+- [archive/tar: incorrectly claims huge file size](https://github.com/golang/go/issues/12434)
+- [archive/tar: reader returns bogus headers](https://github.com/golang/go/issues/12436) **fixed**
 - [encoding/gob: panic: drop](https://github.com/golang/go/issues/10272) **fixed**
 - [encoding/gob: makeslice: len out of range](https://github.com/golang/go/issues/10273) [3 bugs] **fixed**
 - [encoding/gob: stack overflow](https://github.com/golang/go/issues/10415) **fixed**
@@ -240,7 +269,7 @@ by go-fuzz are inspired by work done by Mateusz Jurczyk, Gynvael Coldwind and
 - [encoding/asn1: index out of range](https://github.com/golang/go/issues/11129) **fixed**
 - [encoding/asn1: incorrectly handles incorrect utf8 strings](https://github.com/golang/go/issues/11126) **fixed**
 - [encoding/asn1: slice is lost during marshal/unmarshal](https://github.com/golang/go/issues/11130)
-- [encoding/asn1: call of reflect.Value.Type on zero Value](https://github.com/golang/go/issues/11127)
+- [encoding/asn1: call of reflect.Value.Type on zero Value](https://github.com/golang/go/issues/11127) **fixed**
 - [encoding/asn1: Unmarshal accepts negative dates](https://github.com/golang/go/issues/11134) **fixed**
 - [encoding/pem: can't decode encoded message](https://github.com/golang/go/issues/10980) **fixed**
 - [crypto:x509: input not full blocks](https://github.com/golang/go/issues/11215) **fixed**
@@ -251,6 +280,7 @@ by go-fuzz are inspired by work done by Mateusz Jurczyk, Gynvael Coldwind and
 - [image/jpeg: Decode hangs](https://github.com/golang/go/issues/10413) **fixed**
 - [image/jpeg: excessive memory usage](https://github.com/golang/go/issues/10532) **fixed**
 - [image/png: slice bounds out of range](https://github.com/golang/go/issues/10414) **fixed**
+- [image/png: slice bounds out of range (2)](https://github.com/golang/go/issues/12545) **fixed**
 - [image/png: interface conversion: color.Color is color.NRGBA, not color.RGBA](https://github.com/golang/go/issues/10423) **fixed**
 - [image/png: nil deref](https://github.com/golang/go/issues/10493) **fixed**
 - [image/gif: image block is out of bounds](https://github.com/golang/go/issues/10676) **fixed**
@@ -274,13 +304,28 @@ by go-fuzz are inspired by work done by Mateusz Jurczyk, Gynvael Coldwind and
 - [html/template: panic: Call using zero Value argument](https://github.com/golang/go/issues/10634) **fixed**
 - [html/template: nil pointer dereference](https://github.com/golang/go/issues/10673) **fixed**
 - [html/template: slice bounds out of range](https://github.com/golang/go/issues/10799) **fixed**
-- [mime: ParseMediaType parses invalid media types](https://github.com/golang/go/issues/11289)
-- [mime: Parse/Format corrupt parameters](https://github.com/golang/go/issues/11290)
-- [mime: Parse/Format corrupt parameters (2)](https://github.com/golang/go/issues/11291)
+- [mime: ParseMediaType parses invalid media types](https://github.com/golang/go/issues/11289) **fixed**
+- [mime: Parse/Format corrupt parameters](https://github.com/golang/go/issues/11290) **fixed**
+- [mime: Parse/Format corrupt parameters (2)](https://github.com/golang/go/issues/11291) **fixed**
 - [go/parser: eats \r in comments](https://github.com/golang/go/issues/11151)
 - [go/format: turns correct program into incorrect one](https://github.com/golang/go/issues/11274)
-- [go/format: non-idempotent format](https://github.com/golang/go/issues/11275)
+- [go/format: non-idempotent format](https://github.com/golang/go/issues/11275) **fixed**
 - [go/format: adds }](https://github.com/golang/go/issues/11276) **fixed**
+- [go/types: panics on invalid constant](https://github.com/golang/go/issues/11325) **fixed**
+- [go/types: compiling hangs](https://github.com/golang/go/issues/11327) **fixed**
+- [go/types: stupid shift](https://github.com/golang/go/issues/11328) **fixed**
+- [go/types: line number out of range](https://github.com/golang/go/issues/11329)
+- [go/types: assertion failed](https://github.com/golang/go/issues/11347) **fixed**
+- [go/types: converts fp constant to string](https://github.com/golang/go/issues/11353) **fixed**
+- [go/types: converts complex constant to string](https://github.com/golang/go/issues/11357) **fixed**
+- [go/types: misses '-' in error message](https://github.com/golang/go/issues/11367) **fixed**
+- [go/types: compiles invalid program with overflow](https://github.com/golang/go/issues/11368)
+- [go/types: allows duplicate switch cases](https://github.com/golang/go/issues/11578) **fixed**
+- [go/types: can shift complex numbers](https://github.com/golang/go/issues/11594) **fixed**
+- [go/types: parses comma terminated fields](https://github.com/golang/go/issues/11611) **fixed**
+- [go/types: int overflow in switch expression](https://github.com/golang/go/issues/11667) **fixed**
+- [go/types: allows multiple-value in switch and case](https://github.com/golang/go/issues/11687) **fixed**
+- [go/types: invalid error message for valid conversion to complex64](https://github.com/golang/go/issues/11590) **fixed**
 - [debug/elf: index out of range](https://github.com/golang/go/issues/10996)
 - [debug/elf: makeslice: len out of range](https://github.com/golang/go/issues/10997)
 - [debug/elf: slice bounds out of range](https://github.com/golang/go/issues/10999)
@@ -313,80 +358,86 @@ by go-fuzz are inspired by work done by Mateusz Jurczyk, Gynvael Coldwind and
 - [x/crypto/ssh: Server panic on invalid input](https://github.com/golang/go/issues/11348) **fixed**
 - [x/crypto/openpgp: ReadMessage(): Panic on invalid input in packet.nextSubpacket](https://github.com/golang/go/issues/11503) **fixed**
 - [x/crypto/openpgp: ReadMessage(): Panic on invalid input in packet.PublicKeyV3.setFingerPrintAndKeyId](https://github.com/golang/go/issues/11504) **fixed**
-- [x/crypto/openpgp: ReadMessage(): Panic on invalid input in math/big.nat.div](https://github.com/golang/go/issues/11505)
-- [x/tools/go/types: panics on invalid constant](https://github.com/golang/go/issues/11325) **fixed**
-- [x/tools/go/types: compiling hangs](https://github.com/golang/go/issues/11327)
-- [x/tools/go/types: stupid shift](https://github.com/golang/go/issues/11328)
-- [x/tools/go/types: line number out of range](https://github.com/golang/go/issues/11329)
-- [x/tools/go/types: assertion failed](https://github.com/golang/go/issues/11347)
-- [x/tools/go/types: converts fp constant to string](https://github.com/golang/go/issues/11353) **fixed**
-- [x/tools/go/types: converts complex constant to string](https://github.com/golang/go/issues/11357) **fixed**
-- [x/tools/go/types: misses '-' in error message](https://github.com/golang/go/issues/11367) **fixed**
-- [x/tools/go/types: compiles invalid program with overflow](https://github.com/golang/go/issues/11368)
-- [x/tools/go/types: allows duplicate switch cases](https://github.com/golang/go/issues/11578)
-- [x/tools/go/types: can shift complex numbers](https://github.com/golang/go/issues/11594) **fixed**
-- [x/tools/go/types: parses comma terminated fields](https://github.com/golang/go/issues/11611)
-- [x/tools/go/types: int overflow in switch expression](https://github.com/golang/go/issues/11667)
-- [go/types: allows multiple-value in switch and case](https://github.com/golang/go/issues/11687)
-- [go/types: invalid error message for valid conversion to complex64](https://github.com/golang/go/issues/11590)
-- [gccgo: bogus index out of bounds](https://github.com/golang/go/issues/11522)
-- [gccgo: does not see stupidness of shift count](https://github.com/golang/go/issues/11524)
-- [gccgo: bogus integer constant overflow](https://github.com/golang/go/issues/11525)
-- [gccgo: segmentation fault](https://github.com/golang/go/issues/11526)
-- [gccgo: segmentation fault (2)](https://github.com/golang/go/issues/11536)
-- [gccgo: segmentation fault (3)](https://github.com/golang/go/issues/11558)
-- [gccgo: segmentation fault (4)](https://github.com/golang/go/issues/11559)
-- [gccgo: internal compiler error in set_type](https://github.com/golang/go/issues/11537)
-- [gccgo: internal compiler error in global_variable_set_init](https://github.com/golang/go/issues/11541)
-- [gccgo: internal compiler error: in wide_int_to_tree](https://github.com/golang/go/issues/11542)
-- [gccgo: internal compiler error in record_var_depends_on](https://github.com/golang/go/issues/11543)
-- [gccgo: internal compiler error in Builtin_call_expression](https://github.com/golang/go/issues/11544)
-- [gccgo: internal compiler error in check_bounds](https://github.com/golang/go/issues/11545)
-- [gccgo: internal compiler error in do_determine_type](https://github.com/golang/go/issues/11546)
-- [gccgo: internal compiler error in backend_numeric_constant_expression](https://github.com/golang/go/issues/11548)
-- [gccgo: internal compiler error in type_size](https://github.com/golang/go/issues/11554)
-- [gccgo: internal compiler error in type_size (2)](https://github.com/golang/go/issues/11555)
-- [gccgo: internal compiler error in type_size (3)](https://github.com/golang/go/issues/11556)
+- [x/crypto/openpgp: ReadMessage(): Panic on invalid input in math/big.nat.div](https://github.com/golang/go/issues/11505) **fixed**
+- [gccgo: bogus index out of bounds](https://github.com/golang/go/issues/11522) **fixed**
+- [gccgo: does not see stupidness of shift count](https://github.com/golang/go/issues/11524) **fixed**
+- [gccgo: bogus integer constant overflow](https://github.com/golang/go/issues/11525) **fixed**
+- [gccgo: segmentation fault](https://github.com/golang/go/issues/11526) **fixed**
+- [gccgo: segmentation fault (2)](https://github.com/golang/go/issues/11536) **fixed**
+- [gccgo: segmentation fault (3)](https://github.com/golang/go/issues/11558) **fixed**
+- [gccgo: segmentation fault (4)](https://github.com/golang/go/issues/11559) **fixed**
+- [gccgo: internal compiler error in set_type](https://github.com/golang/go/issues/11537) **fixed**
+- [gccgo: internal compiler error in global_variable_set_init](https://github.com/golang/go/issues/11541) **fixed**
+- [gccgo: internal compiler error: in wide_int_to_tree](https://github.com/golang/go/issues/11542) **fixed**
+- [gccgo: internal compiler error in wide_int_to_tree (2)](https://github.com/golang/go/issues/12618) **fixed**
+- [gccgo: internal compiler error in record_var_depends_on](https://github.com/golang/go/issues/11543) **fixed**
+- [gccgo: internal compiler error in Builtin_call_expression](https://github.com/golang/go/issues/11544) **fixed**
+- [gccgo: internal compiler error in check_bounds](https://github.com/golang/go/issues/11545) **fixed**
+- [gccgo: internal compiler error in do_determine_type](https://github.com/golang/go/issues/11546) **fixed**
+- [gccgo: internal compiler error in do_determine_type (2)](https://github.com/golang/go/issues/12937) **fixed**
+- [gccgo: internal compiler error in backend_numeric_constant_expression](https://github.com/golang/go/issues/11548) **fixed**
+- [gccgo: internal compiler error in type_size](https://github.com/golang/go/issues/11554) **fixed**
+- [gccgo: internal compiler error in type_size (2)](https://github.com/golang/go/issues/11555) **fixed**
+- [gccgo: internal compiler error in type_size (3)](https://github.com/golang/go/issues/11556) **fixed**
 - [gccgo: internal compiler error in do_get_backend](https://github.com/golang/go/issues/11560) **fixed**
-- [gccgo: internal compiler error in create_tmp_var](https://github.com/golang/go/issues/11568)
+- [gccgo: internal compiler error in do_get_backend (2)](https://github.com/golang/go/issues/12325) **fixed**
+- [gccgo: internal compiler error in do_get_backend (3)](https://github.com/golang/go/issues/12617) **fixed**
+- [gccgo: internal compiler error in do_get_backend (4)](https://github.com/golang/go/issues/12939) **fixed**
+- [gccgo: internal compiler error in create_tmp_var](https://github.com/golang/go/issues/11568) **fixed**
 - [gccgo: internal compiler error in methods](https://github.com/golang/go/issues/11579) **fixed**
 - [gccgo: internal compiler error in do_flatten](https://github.com/golang/go/issues/11592) **fixed**
-- [gccgo: accepts invalid UTF-8](https://github.com/golang/go/issues/11527)
-- [gccgo: spurious expected newline error](https://github.com/golang/go/issues/11528)
-- [gccgo: can apply ^ to true](https://github.com/golang/go/issues/11529)
-- [gccgo: hangs](https://github.com/golang/go/issues/11530)
-- [gccgo: hangs (2)](https://github.com/golang/go/issues/11531)
-- [gccgo: hangs (3)](https://github.com/golang/go/issues/11539)
-- [gccgo: rejects valid imaginary literal](https://github.com/golang/go/issues/11532)
-- [gccgo: rejects valid fp literal](https://github.com/golang/go/issues/11533)
-- [gccgo: accepts program with invalid identifier](https://github.com/golang/go/issues/11535)
+- [gccgo: internal compiler error in do_flatten (2)](https://github.com/golang/go/issues/12319) **fixed**
+- [gccgo: internal compiler error in do_flatten (3)](https://github.com/golang/go/issues/12320) **fixed**
+- [gccgo: internal compiler error in declare_function](https://github.com/golang/go/issues/11557) **fixed**
+- [gccgo: internal compiler error: in define](https://github.com/golang/go/issues/12316) **fixed**
+- [gccgo: internal compiler error: in do_export](https://github.com/golang/go/issues/12321)
+- [gccgo: internal compiler error in do_lower](https://github.com/golang/go/issues/12615) **fixed**
+- [gccgo: internal compiler error in insert](https://github.com/golang/go/issues/12616) **fixed**
+- [gccgo: internal compiler error in uniform_vector_p](https://github.com/golang/go/issues/12935) **fixed**
+- [gccgo: accepts invalid UTF-8](https://github.com/golang/go/issues/11527) **fixed**
+- [gccgo: spurious expected newline error](https://github.com/golang/go/issues/11528) **fixed**
+- [gccgo: can apply ^ to true](https://github.com/golang/go/issues/11529) **fixed**
+- [gccgo: hangs](https://github.com/golang/go/issues/11530) **fixed**
+- [gccgo: hangs (2)](https://github.com/golang/go/issues/11531) **fixed**
+- [gccgo: hangs (3)](https://github.com/golang/go/issues/11539) **fixed**
+- [gccgo: rejects valid imaginary literal](https://github.com/golang/go/issues/11532) **fixed**
+- [gccgo: rejects valid fp literal](https://github.com/golang/go/issues/11533) **fixed**
+- [gccgo: accepts program with invalid identifier](https://github.com/golang/go/issues/11535) **fixed**
 - [gccgo: accepts program with invalid identifier (2)](https://github.com/golang/go/issues/11547) **fixed**
 - [gccgo: compiles weird construct](https://github.com/golang/go/issues/11561) **fixed**
-- [gccgo: can do bitwise or on fp constants](https://github.com/golang/go/issues/11566)
+- [gccgo: can do bitwise or on fp constants](https://github.com/golang/go/issues/11566) **fixed**
 - [gccgo: treats nil as type](https://github.com/golang/go/issues/11567) **fixed**
 - [gccgo: does not understand greek capiltal letter yot](https://github.com/golang/go/issues/11569) **fixed**
+- [gccgo: does not understand CUNEIFORM SIGN DUG TIMES MI](https://github.com/golang/go/issues/12322) **fixed**
 - [gccgo: allows to refer to builtin function not in call expression](https://github.com/golang/go/issues/11570) **fixed**
 - [gccgo: bogus incompatible types in binary expression error](https://github.com/golang/go/issues/11572) **fixed**
 - [gccgo: allows multiple definitions of a function](https://github.com/golang/go/issues/11573) **fixed**
-- [gccgo: can shift by complex number](https://github.com/golang/go/issues/11574)
+- [gccgo: can shift by complex number](https://github.com/golang/go/issues/11574) **fixed**
 - [gccgo: knowns unknown escape sequence](https://github.com/golang/go/issues/11575) **fixed**
 - [gccgo: internal compiler error in start_function](https://github.com/golang/go/issues/11576) **fixed**
-- [gccgo: heap-buffer-overflow in Lex::skip_cpp_comment](https://github.com/golang/go/issues/11577)
+- [gccgo: internal compiler error: in start_function (2)](https://github.com/golang/go/issues/12324) **fixed**
+- [gccgo: heap-buffer-overflow in Lex::skip_cpp_comment](https://github.com/golang/go/issues/11577) **fixed**
 - [gccgo: does not convert untyped complex 0i to int in binary operation involving an int](https://github.com/golang/go/issues/11563)
 - [gccgo: does not detect missing return](https://github.com/golang/go/issues/11591) **fixed**
 - [gccgo: invalid error message for valid conversion to complex64](https://github.com/golang/go/issues/11615)
-- [gccgo: can shift complex numbers](https://github.com/golang/go/issues/11616)
+- [gccgo: can shift complex numbers](https://github.com/golang/go/issues/11616) **fixed**
+- [gccgo: does not error on unused var](https://github.com/golang/go/issues/12317) **fixed**
+- [gccgo: treats 0 as channel](https://github.com/golang/go/issues/12323) **fixed**
+- [gccgo: does not recognize unused import](https://github.com/golang/go/issues/12326) **fixed**
+- [gccgo: can shift by string](https://github.com/golang/go/issues/12936) **fixed**
 - [github.com/golang/protobuf: call of reflect.Value.SetMapIndex on zero Value](https://github.com/golang/protobuf/issues/27) **fixed**
 - [github.com/golang/protobuf: call of reflect.Value.Interface on zero Value in MarshalText](https://github.com/golang/protobuf/issues/33) **fixed**
 - [github.com/golang/protobuf: Invalid map is successfully decoded](https://github.com/golang/protobuf/issues/34)
 - [github.com/golang/protobuf: MarshalText incorrectly handles unknown bytes](https://github.com/golang/protobuf/issues/35)
 - [github.com/golang/protobuf: MarshalText fails and prints to stderr](https://github.com/golang/protobuf/issues/36)
+- [github.com/golang/protobuf: Unmarshaling errors for packed fields](https://github.com/golang/protobuf/issues/76) **fixed**
+- [Equal prints to stderr and fails on what's handled by Marshal/Unmarshal](https://github.com/golang/protobuf/issues/114)
 - [code.google.com/p/freetype-go: 42 crashers](https://code.google.com/p/freetype-go/issues/detail?id=17) [42 bugs]
 - [github.com/cryptix/wav: 2 panics in header decoding](https://github.com/cryptix/wav/commit/2f49a0df0d213ee323f694e7bdee8b8a097dc698#diff-f86b763600291cbceee077a33133434a) **fixed**
 - [github.com/spf13/hugo: 7 crashers](https://github.com/spf13/hugo/search?q=go-fuzz&type=Issues) **7 fixed**
 - [github.com/Sereal/Sereal: 8 crashers](https://github.com/Sereal/Sereal/commit/c254cc3f2c48caffee6cd04ea8100a0150357a44) **fixed**
-- [github.com/bradfitz/http2: Server.handleConn hangs](https://github.com/bradfitz/http2/issues/53)
-- [github.com/bradfitz/http2: nil pointer dereference in hpack.HuffmanDecode](https://github.com/bradfitz/http2/issues/56)
+- [github.com/bradfitz/http2: Server.handleConn hangs](https://github.com/bradfitz/http2/issues/53) **fixed**
+- [github.com/bradfitz/http2: nil pointer dereference in hpack.HuffmanDecode](https://github.com/bradfitz/http2/issues/56) **fixed**
 - [github.com/bradfitz/http2: serverConn.readFrames goroutine leak](https://github.com/bradfitz/http2/issues/58)
 - [github.com/golang/snappy: index out of range panic](https://github.com/golang/snappy/issues/11) **fixed**
 - [github.com/bkaradzic/go-lz4: slice bounds out of range](https://github.com/bkaradzic/go-lz4/commit/b8d4dc7b31511bf5f39dfdb02d2ea7662eb8407c) **fixed**
@@ -412,12 +463,32 @@ by go-fuzz are inspired by work done by Mateusz Jurczyk, Gynvael Coldwind and
 - [cockroachdb/cockroach: weird QualifiedName.Base panics on reproduce](https://github.com/cockroachdb/cockroach/issues/1938)
 - [github.com/google/open-location-code: Extremely long codes can cause underflow errors](https://github.com/google/open-location-code/issues/12)
 - [github.com/akrennmair/gopcap: incorrectly formed IP, UDP, TCP, ICMP packets can cause out of range errors](https://github.com/akrennmair/gopcap/commit/00e11033259acb75598ba416495bb708d864a010) **fixed**
-- [github.com/gogo/protobuf: gogofast generates Unmarshal code that can panic](https://github.com/gogo/protobuf/issues/86)
+- [github.com/gogo/protobuf: gogofast generates Unmarshal code that can panic](https://github.com/gogo/protobuf/issues/86) **fixed**
 - [github.com/DHowett/go-plist: Various panics found through go-fuzz](https://github.com/DHowett/go-plist/issues/15)
 - [github.com/streadway/amqp: go-fuzz fixes](https://github.com/streadway/amqp/pull/151)
 - [github.com/andybalholm/cascadia: panic when parsing selectors like `:contains(`](https://github.com/andybalholm/cascadia/commit/3ad29d1ad1c4f2023e355603324348cf1f4b2d48) **fixed**
 - [github.com/Azure/go-pkcs12: panic on malformed certificates](https://github.com/Azure/go-pkcs12/issues/25)
 - [github.com/nats-io/gnatsd: panic on malformed input](https://github.com/nats-io/gnatsd/issues/95)
 - [github.com/miekg/dns: 8 crashers](https://github.com/miekg/dns/pull/237) **fixed**
+- [github.com/influxdb/influxdb: index out of range](https://github.com/influxdb/influxdb/pull/3570) **fixed**
+- [collectd.org/network: 2 crashers](https://github.com/collectd/go-collectd/pull/6) **fixed**
+- [collectd.org/network: index out of range](https://github.com/collectd/go-collectd/issues/10) **fixed**
+- [github.com/arolek/ase: 2 crashers](https://github.com/arolek/ase/pull/18) **fixed**
+- [github.com/lytics/confl: infinite loop on malformed input](https://github.com/lytics/confl/issues/6) **fixed**
+- [github.com/zeebo/bencode: reject strings with negative length](https://github.com/zeebo/bencode/pull/15) **fixed**
+- [github.com/hydrogen18/stalecucumber: 4 crashers](https://github.com/hydrogen18/stalecucumber/pull/5)
+- [github.com/gonum/blas: cgo indexing error](https://github.com/gonum/blas/issues/133) **fixed**
+- [OpenBLAS: incorrect idamax with NaN value](https://github.com/xianyi/OpenBLAS/issues/624)
+- [github.com/eaburns/flac: 3 crashers](https://github.com/eaburns/flac/pull/6)
+- [github.com/yvasiyarov/php_session_decoder: 4 crashers](https://github.com/yvasiyarov/php_session_decoder/pull/15)
+- [xi2.org/x/xz: index out of bounds](https://github.com/xi2/xz/issues/3) **fixed**
+- [github.com/pierrec/lz4: 2 crashers](https://github.com/pierrec/lz4/commit/0b67ae4bb1ab03691079e38dddbc3909d68de64f) **fixed**
+- [github.com/dustin/go-coap: slice bounds out of range (1)](https://github.com/dustin/go-coap/commit/979f9a1787fc3091ba5c337a6d1d903432ce2007) **fixed**
+- [github.com/dustin/go-coap: slice bounds out of range (2)](https://github.com/dustin/go-coap/commit/a2260b92ac405c9c63c4a89c15bb705a3f2928bf) **fixed**
+- [github.com/dgryski/go-quicklz: many array-out-of-bounds issues](https://github.com/dgryski/go-quicklz/commit/6897f36a2bb707fe5b294fb9c06b7e086ab9503b) **fixed**
+- [github.com/rasky/go-lzo: possible infinite loop with single byte input](https://github.com/rasky/go-lzo/commit/22d79fde8006d605b307e3d58b775d9c1f756d52) **fixed**
+- [github.com/ulikunitz/xz: panic in lzma.writeRep](https://github.com/ulikunitz/xz/issues/3)
+- [github.com/Preetam/sflow: excessive memory consumption](https://github.com/Preetam/sflow/issues/29) **fixed**
+- [github.com/hashicorp/go-version: unhandled value out of range](https://github.com/hashicorp/go-version/pull/11) **fixed**
 
 **If you find some bugs with go-fuzz and are comfortable with sharing them, I would like to add them to this list.** Please either send a pull request for README.md (preferable) or file an issue. If the source code is closed, you can say just "found N bugs in project X". Thank you.

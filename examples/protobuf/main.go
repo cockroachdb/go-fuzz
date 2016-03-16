@@ -1,3 +1,6 @@
+// Copyright 2015 Dmitry Vyukov. All rights reserved.
+// Use of this source code is governed by Apache 2 LICENSE that can be found in the LICENSE file.
+
 package protobuf
 
 import (
@@ -9,6 +12,8 @@ import (
 	pb "github.com/dvyukov/go-fuzz/examples/protobuf/pb"
 	"github.com/golang/protobuf/proto"
 )
+
+// Note: we can't compare serialized data because e.g. maps are serialized in unspecified order.
 
 func Fuzz(data []byte) int {
 	return fuzz(data, false)
@@ -64,6 +69,7 @@ func fuzz(data []byte, text bool) int {
 			continue
 		}
 		score = 1
+		sz := proto.Size(v)
 		var data1 []byte
 		if text {
 			var buf bytes.Buffer
@@ -79,12 +85,20 @@ func fuzz(data []byte, text bool) int {
 		if text {
 			err = proto.UnmarshalText(string(data1), v1)
 		} else {
+			if sz != len(data1) {
+				panic(fmt.Sprintf("Size returned %v, while Marshal returned %v", sz, len(data1)))
+			}
 			err = proto.Unmarshal(data1, v1)
 		}
 		if err != nil {
 			panic(err)
 		}
 		if !DeepEqual(v, v1) {
+			fmt.Printf("v0: %#v\n", v)
+			fmt.Printf("v1: %#v\n", v1)
+			panic(fmt.Sprintf("non idempotent marshal of %T", v))
+		}
+		if !proto.Equal(v, v1) {
 			fmt.Printf("v0: %#v\n", v)
 			fmt.Printf("v1: %#v\n", v1)
 			panic(fmt.Sprintf("non idempotent marshal of %T", v))
@@ -107,12 +121,39 @@ func fuzz(data []byte, text bool) int {
 				fmt.Printf("failed to UnmarshalText: %q\n", buf.Bytes())
 				panic(err)
 			}
-			if !DeepEqual(v, v2) {
+			if !proto.Equal(v, v2) {
 				fmt.Printf("v0: %#v\n", v)
 				fmt.Printf("v2: %#v\n", v2)
 				panic(fmt.Sprintf("non idempotent text marshal of %T", v))
 			}
 		}
+		v3 := proto.Clone(v)
+		if !DeepEqual(v, v3) {
+			fmt.Printf("v0: %#v\n", v)
+			fmt.Printf("v3: %#v\n", v3)
+			panic(fmt.Sprintf("bad clone of %T", v))
+		}
+		proto.SetDefaults(v3)
+		if !proto.Equal(v, v3) {
+			fmt.Printf("v0: %#v\n", v)
+			fmt.Printf("v3: %#v\n", v3)
+			panic(fmt.Sprintf("SetDefaults changed data %T", v))
+		}
+		proto.Merge(v3, v1)
+		if idempotentMerge(v) && !proto.Equal(v, v3) {
+			fmt.Printf("v0: %#v\n", v)
+			fmt.Printf("v3: %#v\n", v3)
+			panic(fmt.Sprintf("Merge changed data %T", v))
+		}
 	}
 	return score
+}
+
+func idempotentMerge(v interface{}) bool {
+	switch v.(type) {
+	case *pb.M19, *pb.M20, *pb.M21, *pb.M22:
+		return false
+	default:
+		return true
+	}
 }
