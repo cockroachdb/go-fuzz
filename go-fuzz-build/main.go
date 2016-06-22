@@ -231,13 +231,25 @@ func createFuzzMain(pkg string) {
 	writeFile(filepath.Join(workdir, "src", mainPkg, "main.go"), []byte(src))
 }
 
+// These CockroachDB packages all have C++ dependencies in sub-directories which
+// are not tracked correctly by 'go list'. Because of this, when cloning these
+// packages we must also copy sub-directories.
+var recPkgSet = map[string]struct{}{
+	"github.com/cockroachdb/c-rocksdb":                        struct{}{},
+	"github.com/cockroachdb/c-snappy":                         struct{}{},
+	"github.com/cockroachdb/c-jemalloc":                       struct{}{},
+	"github.com/cockroachdb/c-protobuf":                       struct{}{},
+	"github.com/cockroachdb/cockroach/storage/engine/rocksdb": struct{}{},
+}
+
 func clonePackage(workdir, pkg, targetPkg string) {
 	dir := goListProps(pkg, "Dir")[0]
 	if !strings.HasSuffix(filepath.ToSlash(dir), pkg) {
 		failf("package dir '%v' does not end with import path '%v'", dir, pkg)
 	}
 	newDir := filepath.Join(workdir, "src", targetPkg)
-	copyDir(dir, newDir, false, isSourceFile)
+	_, rec := recPkgSet[pkg]
+	copyDir(dir, newDir, rec, isSourceFile)
 }
 
 type Package struct {
