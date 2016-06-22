@@ -12,6 +12,7 @@ import (
 	"go/ast"
 	"go/parser"
 	"go/token"
+	"go/types"
 	"io/ioutil"
 	"os"
 	"os/exec"
@@ -20,7 +21,6 @@ import (
 	"strings"
 
 	. "github.com/dvyukov/go-fuzz/go-fuzz-defs"
-	"golang.org/x/tools/go/types"
 )
 
 var (
@@ -72,6 +72,7 @@ func main() {
 	deps["unsafe"] = true
 	deps["sync"] = true
 	deps["sync/atomic"] = true
+	deps["internal/race"] = true
 	if runtime.GOOS == "windows" {
 		// syscall depends on unicode/utf16.
 		// Cross-compilation is not implemented.
@@ -249,21 +250,52 @@ type Package struct {
 	deps    []*Package
 }
 
+type Importer struct {
+	pkgs map[string]*types.Package
+}
+
+func (imp *Importer) Import(path string) (*types.Package, error) {
+	panic("must not be called")
+}
+
+func (imp *Importer) ImportFrom(path, srcDir string, mode types.ImportMode) (*types.Package, error) {
+	if pkg := imp.pkgs[path]; pkg != nil {
+		return pkg, nil
+	}
+
+	// Vendor hackery.
+	prefix := filepath.Join(workdir, "src") + string(os.PathSeparator)
+	if strings.HasPrefix(srcDir, prefix) {
+		srcDir = srcDir[len(prefix):]
+	}
+	parts := strings.Split(srcDir, string(os.PathSeparator))
+	for i := 0; i <= len(parts); i++ {
+		vendorPath := strings.Join(parts[:len(parts)-i], string(os.PathSeparator))
+		vendorPath = filepath.Join(vendorPath, "vendor", path)
+		if pkg := imp.pkgs[vendorPath]; pkg != nil {
+			return pkg, nil
+		}
+	}
+	failf("can't find imported package %v", path)
+	return nil, nil
+}
+
 func instrumentPackages(workdir string, deps map[string]bool, lits map[Literal]struct{}, blocks *[]CoverBlock, sonar *[]CoverBlock) {
 	ignore := map[string]bool{
-		"runtime":                 true, // lots of non-determinism and irrelevant code paths (e.g. different paths in mallocgc, chans and maps)
-		"runtime/internal/atomic": true, // runtime depends on it
-		"runtime/internal/sys":    true, // runtime depends on it
-		"unsafe":                  true, // nothing to see here (also creates import cycle with go-fuzz-dep)
-		"errors":                  true, // nothing to see here (also creates import cycle with go-fuzz-dep)
-		"syscall":                 true, // creates import cycle with go-fuzz-dep (and probably nothing to see here)
-		"sync":                    true, // non-deterministic and not interesting (also creates import cycle with go-fuzz-dep)
-		"sync/atomic":             true, // not interesting (also creates import cycle with go-fuzz-dep)
-		"time":                    true, // creates import cycle with go-fuzz-dep
-		"internal/race":           true, // runtime depends on it
-		"runtime/cgo":             true, // why would we instrument it?
-		"runtime/pprof":           true, // why would we instrument it?
-		"runtime/race":            true, // why would we instrument it?
+		"runtime":                         true, // lots of non-determinism and irrelevant code paths (e.g. different paths in mallocgc, chans and maps)
+		"runtime/internal/atomic":         true, // runtime depends on it
+		"runtime/internal/sys":            true, // runtime depends on it
+		"unsafe":                          true, // nothing to see here (also creates import cycle with go-fuzz-dep)
+		"errors":                          true, // nothing to see here (also creates import cycle with go-fuzz-dep)
+		"syscall":                         true, // creates import cycle with go-fuzz-dep (and probably nothing to see here)
+		"internal/syscall/windows/sysdll": true, //syscall depends on it
+		"sync":          true, // non-deterministic and not interesting (also creates import cycle with go-fuzz-dep)
+		"sync/atomic":   true, // not interesting (also creates import cycle with go-fuzz-dep)
+		"time":          true, // creates import cycle with go-fuzz-dep
+		"internal/race": true, // runtime depends on it
+		"runtime/cgo":   true, // why would we instrument it?
+		"runtime/pprof": true, // why would we instrument it?
+		"runtime/race":  true, // why would we instrument it?
 	}
 	if runtime.GOOS == "windows" {
 		// Cross-compilation is not implemented.
@@ -299,6 +331,7 @@ func instrumentPackages(workdir string, deps map[string]bool, lits map[Literal]s
 		}
 	}
 	typedPackages := make(map[string]*types.Package)
+	importer := &Importer{typedPackages}
 	for len(ready) != 0 {
 		p := ready[len(ready)-1]
 		ready = ready[:len(ready)-1]
@@ -322,13 +355,7 @@ func instrumentPackages(workdir string, deps map[string]bool, lits map[Literal]s
 			}
 
 			cfg := &types.Config{
-				Packages: typedPackages,
-				Import: func(packages map[string]*types.Package, pkg string) (*types.Package, error) {
-					if packages[pkg] == nil {
-						failf("can't find imported package %v", pkg)
-					}
-					return packages[pkg], nil
-				},
+				Importer: importer,
 			}
 			typed, err := cfg.Check(p.name, p.fset, files, &p.info)
 			if err != nil {
