@@ -1,0 +1,985 @@
+I160622 21:52:39.082179 storage/engine/rocksdb.go:143  opening in memory rocksdb instance
+W160622 21:52:39.083565 server/server.go:111  running in insecure mode, this is strongly discouraged. See --insecure.
+W160622 21:52:39.083673 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.085388 server/node.go:401  store store=0:0 ([]=) not bootstrapped
+W160622 21:52:39.088190 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.088879 storage/replica_command.go:1576  range 1: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.587655402s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.088724124 +0000 UTC]
+I160622 21:52:39.089497 server/node.go:327  **** cluster {40bd269e-447a-4b3c-9744-51d67fb0664e} has been created
+I160622 21:52:39.089530 server/node.go:328  **** add additional nodes by specifying --join=127.0.0.1:57921
+W160622 21:52:39.089541 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.090110 server/node.go:414  initialized store store=1:1 ([]=): {Capacity:249779191808 Available:201901326336 RangeCount:0}
+I160622 21:52:39.090142 server/node.go:302  node ID 1 initialized
+I160622 21:52:39.090199 storage/stores.go:292  read 0 node addresses from persistent storage
+I160622 21:52:39.090325 server/node.go:535  connecting to gossip network to verify cluster ID...
+I160622 21:52:39.091122 server/node.go:556  node connected via gossip and verified as part of cluster {"40bd269e-447a-4b3c-9744-51d67fb0664e"}
+I160622 21:52:39.091162 server/node.go:355  [node=1] Started node with [[]=] engine(s) and attributes []
+I160622 21:52:39.091216 server/server.go:426  starting http server at 127.0.0.1:57922
+I160622 21:52:39.091240 server/server.go:427  starting grpc/postgres server at 127.0.0.1:57921
+I160622 21:52:39.092142 storage/split_queue.go:97  splitting range=1 [/Min-/Max) at keys [/Table/11/0 /Table/12/0 /Table/13/0 /Table/14/0]
+I160622 21:52:39.093029 storage/replica_command.go:2127  initiating a split of range=1 [/Min-/Max) at key /Table/11
+I160622 21:52:39.119192 server/updates.go:156  No previous updates check time.
+I160622 21:52:39.131105 storage/replica_command.go:1576  range 2: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.6897746s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.131064631 +0000 UTC]
+I160622 21:52:39.131222 storage/replica_command.go:2127  initiating a split of range=2 [/Table/11-/Max) at key /Table/12
+I160622 21:52:39.136552 storage/replica_command.go:1576  range 3: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.6897746s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.136516383 +0000 UTC]
+I160622 21:52:39.136650 storage/replica_command.go:2127  initiating a split of range=3 [/Table/12-/Max) at key /Table/13
+I160622 21:52:39.146898 storage/replica_command.go:1576  range 4: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.696493379s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.146853533 +0000 UTC]
+I160622 21:52:39.147001 storage/replica_command.go:2127  initiating a split of range=4 [/Table/13-/Max) at key /Table/14
+E160622 21:52:39.156722 server/server.go:371  sql/pgwire/encoding.go:105: NUL terminator not found
+I160622 21:52:39.158530 storage/engine/rocksdb.go:143  opening in memory rocksdb instance
+W160622 21:52:39.159302 server/server.go:111  running in insecure mode, this is strongly discouraged. See --insecure.
+W160622 21:52:39.159334 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.163276 server/node.go:401  store store=0:0 ([]=) not bootstrapped
+W160622 21:52:39.165185 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.165572 storage/replica_command.go:1576  range 1: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.665005333s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.165493139 +0000 UTC]
+I160622 21:52:39.165951 server/node.go:327  **** cluster {1f4b8954-1c45-4a6c-b9b3-09a515606c70} has been created
+I160622 21:52:39.165964 server/node.go:328  **** add additional nodes by specifying --join=127.0.0.1:57935
+W160622 21:52:39.165974 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.166570 server/node.go:414  initialized store store=1:1 ([]=): {Capacity:249779191808 Available:201901326336 RangeCount:0}
+I160622 21:52:39.166589 server/node.go:302  node ID 1 initialized
+I160622 21:52:39.166626 storage/stores.go:292  read 0 node addresses from persistent storage
+I160622 21:52:39.166665 server/node.go:535  connecting to gossip network to verify cluster ID...
+I160622 21:52:39.167237 server/node.go:556  node connected via gossip and verified as part of cluster {"1f4b8954-1c45-4a6c-b9b3-09a515606c70"}
+I160622 21:52:39.167263 server/node.go:355  [node=1] Started node with [[]=] engine(s) and attributes []
+I160622 21:52:39.167280 server/server.go:426  starting http server at 127.0.0.1:57936
+I160622 21:52:39.167290 server/server.go:427  starting grpc/postgres server at 127.0.0.1:57935
+I160622 21:52:39.167765 storage/split_queue.go:97  splitting range=1 [/Min-/Max) at keys [/Table/11/0 /Table/12/0 /Table/13/0 /Table/14/0]
+I160622 21:52:39.168462 storage/replica_command.go:2127  initiating a split of range=1 [/Min-/Max) at key /Table/11
+I160622 21:52:39.172025 storage/replica_command.go:1576  range 2: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.766224911s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.17198533 +0000 UTC]
+I160622 21:52:39.172122 storage/replica_command.go:2127  initiating a split of range=2 [/Table/11-/Max) at key /Table/12
+I160622 21:52:39.176507 storage/replica_command.go:1576  range 3: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.766224911s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.176463003 +0000 UTC]
+I160622 21:52:39.176608 storage/replica_command.go:2127  initiating a split of range=3 [/Table/12-/Max) at key /Table/13
+I160622 21:52:39.193257 server/updates.go:156  No previous updates check time.
+I160622 21:52:39.214012 storage/replica_command.go:1576  range 4: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.766224911s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.21396929 +0000 UTC]
+I160622 21:52:39.214114 storage/replica_command.go:2127  initiating a split of range=4 [/Table/13-/Max) at key /Table/14
+E160622 21:52:39.227111 server/server.go:371  sql/pgwire/encoding.go:134: insufficient data: 1
+I160622 21:52:39.229953 storage/engine/rocksdb.go:143  opening in memory rocksdb instance
+W160622 21:52:39.230706 server/server.go:111  running in insecure mode, this is strongly discouraged. See --insecure.
+W160622 21:52:39.230740 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.231948 server/node.go:401  store store=0:0 ([]=) not bootstrapped
+W160622 21:52:39.233311 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.233701 storage/replica_command.go:1576  range 1: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.733053604s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.233617089 +0000 UTC]
+I160622 21:52:39.234126 server/node.go:327  **** cluster {209160e8-ea28-423b-b460-f2a4c350981d} has been created
+I160622 21:52:39.234142 server/node.go:328  **** add additional nodes by specifying --join=127.0.0.1:57948
+W160622 21:52:39.234152 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.237809 server/node.go:414  initialized store store=1:1 ([]=): {Capacity:249779191808 Available:201901326336 RangeCount:0}
+I160622 21:52:39.237917 server/node.go:302  node ID 1 initialized
+I160622 21:52:39.237975 storage/stores.go:292  read 0 node addresses from persistent storage
+I160622 21:52:39.238036 server/node.go:535  connecting to gossip network to verify cluster ID...
+I160622 21:52:39.238677 server/node.go:556  node connected via gossip and verified as part of cluster {"209160e8-ea28-423b-b460-f2a4c350981d"}
+I160622 21:52:39.238706 server/node.go:355  [node=1] Started node with [[]=] engine(s) and attributes []
+I160622 21:52:39.238724 server/server.go:426  starting http server at 127.0.0.1:57949
+I160622 21:52:39.238733 server/server.go:427  starting grpc/postgres server at 127.0.0.1:57948
+I160622 21:52:39.239270 storage/split_queue.go:97  splitting range=1 [/Min-/Max) at keys [/Table/11/0 /Table/12/0 /Table/13/0 /Table/14/0]
+I160622 21:52:39.239983 storage/replica_command.go:2127  initiating a split of range=1 [/Min-/Max) at key /Table/11
+I160622 21:52:39.243605 storage/replica_command.go:1576  range 2: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.836914838s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.243560904 +0000 UTC]
+I160622 21:52:39.243702 storage/replica_command.go:2127  initiating a split of range=2 [/Table/11-/Max) at key /Table/12
+I160622 21:52:39.248078 storage/replica_command.go:1576  range 3: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.836914838s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.24803646 +0000 UTC]
+I160622 21:52:39.248171 storage/replica_command.go:2127  initiating a split of range=3 [/Table/12-/Max) at key /Table/13
+I160622 21:52:39.271178 server/updates.go:156  No previous updates check time.
+I160622 21:52:39.278224 storage/replica_command.go:1576  range 4: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.836914838s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.278185862 +0000 UTC]
+I160622 21:52:39.278320 storage/replica_command.go:2127  initiating a split of range=4 [/Table/13-/Max) at key /Table/14
+E160622 21:52:39.322138 server/server.go:371  sql/pgwire/encoding.go:134: insufficient data: 1
+I160622 21:52:39.323914 storage/engine/rocksdb.go:143  opening in memory rocksdb instance
+W160622 21:52:39.324673 server/server.go:111  running in insecure mode, this is strongly discouraged. See --insecure.
+W160622 21:52:39.324709 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+W160622 21:52:39.328965 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.329059 server/node.go:401  store store=0:0 ([]=) not bootstrapped
+I160622 21:52:39.330739 storage/replica_command.go:1576  range 1: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.830237504s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.330653878 +0000 UTC]
+I160622 21:52:39.331088 server/node.go:327  **** cluster {124494bb-02e7-493f-b370-14482d8bb4c8} has been created
+I160622 21:52:39.331101 server/node.go:328  **** add additional nodes by specifying --join=127.0.0.1:57966
+W160622 21:52:39.331110 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.331700 server/node.go:414  initialized store store=1:1 ([]=): {Capacity:249779191808 Available:201901326336 RangeCount:0}
+I160622 21:52:39.331718 server/node.go:302  node ID 1 initialized
+I160622 21:52:39.331753 storage/stores.go:292  read 0 node addresses from persistent storage
+I160622 21:52:39.331787 server/node.go:535  connecting to gossip network to verify cluster ID...
+I160622 21:52:39.332339 server/node.go:556  node connected via gossip and verified as part of cluster {"124494bb-02e7-493f-b370-14482d8bb4c8"}
+I160622 21:52:39.332364 server/node.go:355  [node=1] Started node with [[]=] engine(s) and attributes []
+I160622 21:52:39.332381 server/server.go:426  starting http server at 127.0.0.1:57967
+I160622 21:52:39.332390 server/server.go:427  starting grpc/postgres server at 127.0.0.1:57966
+I160622 21:52:39.332876 storage/split_queue.go:97  splitting range=1 [/Min-/Max) at keys [/Table/11/0 /Table/12/0 /Table/13/0 /Table/14/0]
+I160622 21:52:39.333580 storage/replica_command.go:2127  initiating a split of range=1 [/Min-/Max) at key /Table/11
+I160622 21:52:39.337374 storage/replica_command.go:1576  range 2: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.931329062s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.337328354 +0000 UTC]
+I160622 21:52:39.337490 storage/replica_command.go:2127  initiating a split of range=2 [/Table/11-/Max) at key /Table/12
+I160622 21:52:39.342132 storage/replica_command.go:1576  range 3: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.931329062s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.34208695 +0000 UTC]
+I160622 21:52:39.342244 storage/replica_command.go:2127  initiating a split of range=3 [/Table/12-/Max) at key /Table/13
+I160622 21:52:39.358970 server/updates.go:156  No previous updates check time.
+I160622 21:52:39.379922 storage/replica_command.go:1576  range 4: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.931329062s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.379887789 +0000 UTC]
+I160622 21:52:39.380025 storage/replica_command.go:2127  initiating a split of range=4 [/Table/13-/Max) at key /Table/14
+I160622 21:52:39.392399 storage/engine/rocksdb.go:143  opening in memory rocksdb instance
+W160622 21:52:39.393331 server/server.go:111  running in insecure mode, this is strongly discouraged. See --insecure.
+W160622 21:52:39.393365 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.394269 server/node.go:401  store store=0:0 ([]=) not bootstrapped
+W160622 21:52:39.395540 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.395924 storage/replica_command.go:1576  range 1: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.895256413s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.395847109 +0000 UTC]
+I160622 21:52:39.396273 server/node.go:327  **** cluster {97a80223-7dce-498c-b3e1-d36aff945ccd} has been created
+I160622 21:52:39.396285 server/node.go:328  **** add additional nodes by specifying --join=127.0.0.1:57981
+W160622 21:52:39.396292 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.400351 server/node.go:414  initialized store store=1:1 ([]=): {Capacity:249779191808 Available:201901326336 RangeCount:0}
+I160622 21:52:39.400370 server/node.go:302  node ID 1 initialized
+I160622 21:52:39.400425 storage/stores.go:292  read 0 node addresses from persistent storage
+I160622 21:52:39.400478 server/node.go:535  connecting to gossip network to verify cluster ID...
+I160622 21:52:39.401086 server/node.go:556  node connected via gossip and verified as part of cluster {"97a80223-7dce-498c-b3e1-d36aff945ccd"}
+I160622 21:52:39.401105 server/node.go:355  [node=1] Started node with [[]=] engine(s) and attributes []
+I160622 21:52:39.401121 server/server.go:426  starting http server at 127.0.0.1:57982
+I160622 21:52:39.401130 server/server.go:427  starting grpc/postgres server at 127.0.0.1:57981
+I160622 21:52:39.401593 storage/split_queue.go:97  splitting range=1 [/Min-/Max) at keys [/Table/11/0 /Table/12/0 /Table/13/0 /Table/14/0]
+I160622 21:52:39.402285 storage/replica_command.go:2127  initiating a split of range=1 [/Min-/Max) at key /Table/11
+I160622 21:52:39.405891 storage/replica_command.go:1576  range 2: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.999430881s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.405852161 +0000 UTC]
+I160622 21:52:39.406189 storage/replica_command.go:2127  initiating a split of range=2 [/Table/11-/Max) at key /Table/12
+I160622 21:52:39.410522 storage/replica_command.go:1576  range 3: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.999430881s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.410482529 +0000 UTC]
+I160622 21:52:39.410616 storage/replica_command.go:2127  initiating a split of range=3 [/Table/12-/Max) at key /Table/13
+I160622 21:52:39.428796 server/updates.go:156  No previous updates check time.
+I160622 21:52:39.437535 storage/replica_command.go:1576  range 4: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.999430881s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.43749568 +0000 UTC]
+I160622 21:52:39.437633 storage/replica_command.go:2127  initiating a split of range=4 [/Table/13-/Max) at key /Table/14
+I160622 21:52:39.451245 storage/replica_command.go:1576  range 5: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.000757771s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.451191877 +0000 UTC]
+I160622 21:52:39.458107 storage/engine/rocksdb.go:143  opening in memory rocksdb instance
+W160622 21:52:39.458855 server/server.go:111  running in insecure mode, this is strongly discouraged. See --insecure.
+W160622 21:52:39.458893 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.460022 server/node.go:401  store store=0:0 ([]=) not bootstrapped
+W160622 21:52:39.461342 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.461712 storage/replica_command.go:1576  range 1: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m43.96110826s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.461629242 +0000 UTC]
+I160622 21:52:39.462092 server/node.go:327  **** cluster {3bc8259f-084c-4faf-b1e5-5a2d702d16b8} has been created
+I160622 21:52:39.462106 server/node.go:328  **** add additional nodes by specifying --join=127.0.0.1:57992
+W160622 21:52:39.462115 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.462612 server/node.go:414  initialized store store=1:1 ([]=): {Capacity:249779191808 Available:201901326336 RangeCount:0}
+I160622 21:52:39.462630 server/node.go:302  node ID 1 initialized
+I160622 21:52:39.462672 storage/stores.go:292  read 0 node addresses from persistent storage
+I160622 21:52:39.462717 server/node.go:535  connecting to gossip network to verify cluster ID...
+I160622 21:52:39.463323 server/node.go:556  node connected via gossip and verified as part of cluster {"3bc8259f-084c-4faf-b1e5-5a2d702d16b8"}
+I160622 21:52:39.463349 server/node.go:355  [node=1] Started node with [[]=] engine(s) and attributes []
+I160622 21:52:39.463366 server/server.go:426  starting http server at 127.0.0.1:57993
+I160622 21:52:39.463375 server/server.go:427  starting grpc/postgres server at 127.0.0.1:57992
+I160622 21:52:39.463825 storage/split_queue.go:97  splitting range=1 [/Min-/Max) at keys [/Table/11/0 /Table/12/0 /Table/13/0 /Table/14/0]
+I160622 21:52:39.484617 server/updates.go:156  No previous updates check time.
+I160622 21:52:39.487549 storage/replica_command.go:2127  initiating a split of range=1 [/Min-/Max) at key /Table/11
+I160622 21:52:39.492622 storage/replica_command.go:1576  range 2: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.062335882s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.492579219 +0000 UTC]
+I160622 21:52:39.492735 storage/replica_command.go:2127  initiating a split of range=2 [/Table/11-/Max) at key /Table/12
+I160622 21:52:39.497522 storage/replica_command.go:1576  range 3: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.062335882s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.497462281 +0000 UTC]
+I160622 21:52:39.497638 storage/replica_command.go:2127  initiating a split of range=3 [/Table/12-/Max) at key /Table/13
+I160622 21:52:39.505488 storage/replica_command.go:1576  range 4: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.062335882s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.505440161 +0000 UTC]
+I160622 21:52:39.505646 storage/replica_command.go:2127  initiating a split of range=4 [/Table/13-/Max) at key /Table/14
+I160622 21:52:39.519212 storage/replica_command.go:1576  range 5: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.06882591s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.51917688 +0000 UTC]
+I160622 21:52:39.526280 storage/engine/rocksdb.go:143  opening in memory rocksdb instance
+W160622 21:52:39.527025 server/server.go:111  running in insecure mode, this is strongly discouraged. See --insecure.
+W160622 21:52:39.527056 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.527999 server/node.go:401  store store=0:0 ([]=) not bootstrapped
+W160622 21:52:39.529266 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.529641 storage/replica_command.go:1576  range 1: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.029042698s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.529553009 +0000 UTC]
+I160622 21:52:39.531021 server/node.go:327  **** cluster {d16835b2-a71c-4397-92ab-a9138f6a9662} has been created
+I160622 21:52:39.531036 server/node.go:328  **** add additional nodes by specifying --join=127.0.0.1:58006
+W160622 21:52:39.531047 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.531542 server/node.go:414  initialized store store=1:1 ([]=): {Capacity:249779191808 Available:201901326336 RangeCount:0}
+I160622 21:52:39.531560 server/node.go:302  node ID 1 initialized
+I160622 21:52:39.531592 storage/stores.go:292  read 0 node addresses from persistent storage
+I160622 21:52:39.531628 server/node.go:535  connecting to gossip network to verify cluster ID...
+I160622 21:52:39.532192 server/node.go:556  node connected via gossip and verified as part of cluster {"d16835b2-a71c-4397-92ab-a9138f6a9662"}
+I160622 21:52:39.532216 server/node.go:355  [node=1] Started node with [[]=] engine(s) and attributes []
+I160622 21:52:39.532233 server/server.go:426  starting http server at 127.0.0.1:58007
+I160622 21:52:39.532242 server/server.go:427  starting grpc/postgres server at 127.0.0.1:58006
+I160622 21:52:39.532667 storage/split_queue.go:97  splitting range=1 [/Min-/Max) at keys [/Table/11/0 /Table/12/0 /Table/13/0 /Table/14/0]
+I160622 21:52:39.533617 storage/replica_command.go:2127  initiating a split of range=1 [/Min-/Max) at key /Table/11
+I160622 21:52:39.544520 storage/replica_command.go:1576  range 2: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.13126884s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.544480401 +0000 UTC]
+I160622 21:52:39.544624 storage/replica_command.go:2127  initiating a split of range=2 [/Table/11-/Max) at key /Table/12
+I160622 21:52:39.549107 storage/replica_command.go:1576  range 3: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.13126884s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.549069336 +0000 UTC]
+I160622 21:52:39.549203 storage/replica_command.go:2127  initiating a split of range=3 [/Table/12-/Max) at key /Table/13
+I160622 21:52:39.567029 server/updates.go:156  No previous updates check time.
+I160622 21:52:39.584158 storage/replica_command.go:1576  range 4: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.133723969s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.584116297 +0000 UTC]
+I160622 21:52:39.584270 storage/replica_command.go:2127  initiating a split of range=4 [/Table/13-/Max) at key /Table/14
+I160622 21:52:39.641152 storage/engine/rocksdb.go:143  opening in memory rocksdb instance
+W160622 21:52:39.641917 server/server.go:111  running in insecure mode, this is strongly discouraged. See --insecure.
+W160622 21:52:39.641959 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.646418 server/node.go:401  store store=0:0 ([]=) not bootstrapped
+W160622 21:52:39.647738 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.648097 storage/replica_command.go:1576  range 1: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.147504169s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.648017294 +0000 UTC]
+I160622 21:52:39.648434 server/node.go:327  **** cluster {90845494-1e77-4a90-90fb-74db0fa5560c} has been created
+I160622 21:52:39.648447 server/node.go:328  **** add additional nodes by specifying --join=127.0.0.1:58026
+W160622 21:52:39.648455 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.648969 server/node.go:414  initialized store store=1:1 ([]=): {Capacity:249779191808 Available:201901326336 RangeCount:0}
+I160622 21:52:39.648986 server/node.go:302  node ID 1 initialized
+I160622 21:52:39.649019 storage/stores.go:292  read 0 node addresses from persistent storage
+I160622 21:52:39.649052 server/node.go:535  connecting to gossip network to verify cluster ID...
+I160622 21:52:39.649633 server/node.go:556  node connected via gossip and verified as part of cluster {"90845494-1e77-4a90-90fb-74db0fa5560c"}
+I160622 21:52:39.649658 server/node.go:355  [node=1] Started node with [[]=] engine(s) and attributes []
+I160622 21:52:39.649676 server/server.go:426  starting http server at 127.0.0.1:58027
+I160622 21:52:39.649687 server/server.go:427  starting grpc/postgres server at 127.0.0.1:58026
+I160622 21:52:39.650136 storage/split_queue.go:97  splitting range=1 [/Min-/Max) at keys [/Table/11/0 /Table/12/0 /Table/13/0 /Table/14/0]
+I160622 21:52:39.650874 storage/replica_command.go:2127  initiating a split of range=1 [/Min-/Max) at key /Table/11
+I160622 21:52:39.654977 storage/replica_command.go:1576  range 2: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.248663352s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.654932074 +0000 UTC]
+I160622 21:52:39.655077 storage/replica_command.go:2127  initiating a split of range=2 [/Table/11-/Max) at key /Table/12
+I160622 21:52:39.659575 storage/replica_command.go:1576  range 3: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.248663352s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.659545884 +0000 UTC]
+I160622 21:52:39.659646 storage/replica_command.go:2127  initiating a split of range=3 [/Table/12-/Max) at key /Table/13
+I160622 21:52:39.685171 server/updates.go:156  No previous updates check time.
+I160622 21:52:39.693371 storage/replica_command.go:1576  range 4: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.248663352s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.693332856 +0000 UTC]
+I160622 21:52:39.693472 storage/replica_command.go:2127  initiating a split of range=4 [/Table/13-/Max) at key /Table/14
+I160622 21:52:39.715883 storage/engine/rocksdb.go:143  opening in memory rocksdb instance
+W160622 21:52:39.716656 server/server.go:111  running in insecure mode, this is strongly discouraged. See --insecure.
+W160622 21:52:39.716694 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.717572 server/node.go:401  store store=0:0 ([]=) not bootstrapped
+W160622 21:52:39.718488 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.718791 storage/replica_command.go:1576  range 1: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.21832174s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.718695504 +0000 UTC]
+I160622 21:52:39.721529 server/node.go:327  **** cluster {052309ba-a67e-475e-9fc7-a53eaf62911b} has been created
+I160622 21:52:39.721547 server/node.go:328  **** add additional nodes by specifying --join=127.0.0.1:58039
+W160622 21:52:39.721556 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.722033 server/node.go:414  initialized store store=1:1 ([]=): {Capacity:249779191808 Available:201901326336 RangeCount:0}
+I160622 21:52:39.722045 server/node.go:302  node ID 1 initialized
+I160622 21:52:39.722069 storage/stores.go:292  read 0 node addresses from persistent storage
+I160622 21:52:39.722093 server/node.go:535  connecting to gossip network to verify cluster ID...
+I160622 21:52:39.722447 server/node.go:556  node connected via gossip and verified as part of cluster {"052309ba-a67e-475e-9fc7-a53eaf62911b"}
+I160622 21:52:39.722461 server/node.go:355  [node=1] Started node with [[]=] engine(s) and attributes []
+I160622 21:52:39.722473 server/server.go:426  starting http server at 127.0.0.1:58040
+I160622 21:52:39.722479 server/server.go:427  starting grpc/postgres server at 127.0.0.1:58039
+I160622 21:52:39.722800 storage/split_queue.go:97  splitting range=1 [/Min-/Max) at keys [/Table/11/0 /Table/12/0 /Table/13/0 /Table/14/0]
+I160622 21:52:39.723308 storage/replica_command.go:2127  initiating a split of range=1 [/Min-/Max) at key /Table/11
+I160622 21:52:39.728165 storage/replica_command.go:1576  range 2: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.321795756s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.728126222 +0000 UTC]
+I160622 21:52:39.728285 storage/replica_command.go:2127  initiating a split of range=2 [/Table/11-/Max) at key /Table/12
+I160622 21:52:39.735523 storage/replica_command.go:1576  range 3: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.321795756s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.735487973 +0000 UTC]
+I160622 21:52:39.735621 storage/replica_command.go:2127  initiating a split of range=3 [/Table/12-/Max) at key /Table/13
+I160622 21:52:39.763591 server/updates.go:156  No previous updates check time.
+I160622 21:52:39.769179 storage/replica_command.go:1576  range 4: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.321795756s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.769140499 +0000 UTC]
+I160622 21:52:39.769280 storage/replica_command.go:2127  initiating a split of range=4 [/Table/13-/Max) at key /Table/14
+E160622 21:52:39.819763 server/server.go:371  sql/pgwire/encoding.go:105: NUL terminator not found
+I160622 21:52:39.821495 storage/engine/rocksdb.go:143  opening in memory rocksdb instance
+W160622 21:52:39.822256 server/server.go:111  running in insecure mode, this is strongly discouraged. See --insecure.
+W160622 21:52:39.822288 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.826431 server/node.go:401  store store=0:0 ([]=) not bootstrapped
+W160622 21:52:39.827881 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.828150 storage/replica_command.go:1576  range 1: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.327638321s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.828093244 +0000 UTC]
+I160622 21:52:39.828553 server/node.go:327  **** cluster {f9479865-cd65-47a6-a1c0-f80f5f2ec9b5} has been created
+I160622 21:52:39.828568 server/node.go:328  **** add additional nodes by specifying --join=127.0.0.1:58062
+W160622 21:52:39.828577 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.829312 server/node.go:414  initialized store store=1:1 ([]=): {Capacity:249779191808 Available:201901326336 RangeCount:0}
+I160622 21:52:39.829333 server/node.go:302  node ID 1 initialized
+I160622 21:52:39.829898 storage/stores.go:292  read 0 node addresses from persistent storage
+I160622 21:52:39.829975 server/node.go:535  connecting to gossip network to verify cluster ID...
+I160622 21:52:39.831245 server/node.go:556  node connected via gossip and verified as part of cluster {"f9479865-cd65-47a6-a1c0-f80f5f2ec9b5"}
+I160622 21:52:39.831327 server/node.go:355  [node=1] Started node with [[]=] engine(s) and attributes []
+I160622 21:52:39.831350 server/server.go:426  starting http server at 127.0.0.1:58063
+I160622 21:52:39.831359 server/server.go:427  starting grpc/postgres server at 127.0.0.1:58062
+I160622 21:52:39.831908 storage/split_queue.go:97  splitting range=1 [/Min-/Max) at keys [/Table/11/0 /Table/12/0 /Table/13/0 /Table/14/0]
+I160622 21:52:39.832743 storage/replica_command.go:2127  initiating a split of range=1 [/Min-/Max) at key /Table/11
+I160622 21:52:39.836360 storage/replica_command.go:1576  range 2: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.428795637s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.83632201 +0000 UTC]
+I160622 21:52:39.836455 storage/replica_command.go:2127  initiating a split of range=2 [/Table/11-/Max) at key /Table/12
+I160622 21:52:39.841001 storage/replica_command.go:1576  range 3: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.428795637s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.840968341 +0000 UTC]
+I160622 21:52:39.841091 storage/replica_command.go:2127  initiating a split of range=3 [/Table/12-/Max) at key /Table/13
+I160622 21:52:39.866074 server/updates.go:156  No previous updates check time.
+I160622 21:52:39.869322 storage/replica_command.go:1576  range 4: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.428795637s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.869284252 +0000 UTC]
+I160622 21:52:39.869420 storage/replica_command.go:2127  initiating a split of range=4 [/Table/13-/Max) at key /Table/14
+E160622 21:52:39.920321 server/server.go:371  sql/pgwire/encoding.go:105: NUL terminator not found
+I160622 21:52:39.922047 storage/engine/rocksdb.go:143  opening in memory rocksdb instance
+W160622 21:52:39.922737 server/server.go:111  running in insecure mode, this is strongly discouraged. See --insecure.
+W160622 21:52:39.922767 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.927027 server/node.go:401  store store=0:0 ([]=) not bootstrapped
+W160622 21:52:39.928365 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.928771 storage/replica_command.go:1576  range 1: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.428156795s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.928678897 +0000 UTC]
+I160622 21:52:39.929200 server/node.go:327  **** cluster {db137efc-6502-4df5-a1cc-6adac8228320} has been created
+I160622 21:52:39.929217 server/node.go:328  **** add additional nodes by specifying --join=127.0.0.1:58081
+W160622 21:52:39.929227 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:39.929764 server/node.go:414  initialized store store=1:1 ([]=): {Capacity:249779191808 Available:201901326336 RangeCount:0}
+I160622 21:52:39.929782 server/node.go:302  node ID 1 initialized
+I160622 21:52:39.929823 storage/stores.go:292  read 0 node addresses from persistent storage
+I160622 21:52:39.929861 server/node.go:535  connecting to gossip network to verify cluster ID...
+I160622 21:52:39.930461 server/node.go:556  node connected via gossip and verified as part of cluster {"db137efc-6502-4df5-a1cc-6adac8228320"}
+I160622 21:52:39.930490 server/node.go:355  [node=1] Started node with [[]=] engine(s) and attributes []
+I160622 21:52:39.930508 server/server.go:426  starting http server at 127.0.0.1:58082
+I160622 21:52:39.930519 server/server.go:427  starting grpc/postgres server at 127.0.0.1:58081
+I160622 21:52:39.930985 storage/split_queue.go:97  splitting range=1 [/Min-/Max) at keys [/Table/11/0 /Table/12/0 /Table/13/0 /Table/14/0]
+I160622 21:52:39.931677 storage/replica_command.go:2127  initiating a split of range=1 [/Min-/Max) at key /Table/11
+I160622 21:52:39.936617 storage/replica_command.go:1576  range 2: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.529455819s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.936571078 +0000 UTC]
+I160622 21:52:39.936720 storage/replica_command.go:2127  initiating a split of range=2 [/Table/11-/Max) at key /Table/12
+I160622 21:52:39.941091 storage/replica_command.go:1576  range 3: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.529455819s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.941048532 +0000 UTC]
+I160622 21:52:39.941199 storage/replica_command.go:2127  initiating a split of range=3 [/Table/12-/Max) at key /Table/13
+I160622 21:52:39.960692 server/updates.go:156  No previous updates check time.
+I160622 21:52:39.967610 storage/replica_command.go:1576  range 4: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.529455819s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:39.967577318 +0000 UTC]
+I160622 21:52:39.967701 storage/replica_command.go:2127  initiating a split of range=4 [/Table/13-/Max) at key /Table/14
+E160622 21:52:40.015945 server/server.go:371  sql/pgwire/encoding.go:105: NUL terminator not found
+I160622 21:52:40.017580 storage/engine/rocksdb.go:143  opening in memory rocksdb instance
+W160622 21:52:40.018329 server/server.go:111  running in insecure mode, this is strongly discouraged. See --insecure.
+W160622 21:52:40.018370 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.022110 server/node.go:401  store store=0:0 ([]=) not bootstrapped
+W160622 21:52:40.024656 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.025055 storage/replica_command.go:1576  range 1: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.524432018s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.024969898 +0000 UTC]
+I160622 21:52:40.025457 server/node.go:327  **** cluster {c03c2fa4-3d64-48f1-9343-19fe961e026b} has been created
+I160622 21:52:40.025472 server/node.go:328  **** add additional nodes by specifying --join=127.0.0.1:58099
+W160622 21:52:40.025482 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.026181 server/node.go:414  initialized store store=1:1 ([]=): {Capacity:249779191808 Available:201901326336 RangeCount:0}
+I160622 21:52:40.026202 server/node.go:302  node ID 1 initialized
+I160622 21:52:40.026241 storage/stores.go:292  read 0 node addresses from persistent storage
+I160622 21:52:40.026279 server/node.go:535  connecting to gossip network to verify cluster ID...
+I160622 21:52:40.026862 server/node.go:556  node connected via gossip and verified as part of cluster {"c03c2fa4-3d64-48f1-9343-19fe961e026b"}
+I160622 21:52:40.026887 server/node.go:355  [node=1] Started node with [[]=] engine(s) and attributes []
+I160622 21:52:40.026904 server/server.go:426  starting http server at 127.0.0.1:58100
+I160622 21:52:40.026914 server/server.go:427  starting grpc/postgres server at 127.0.0.1:58099
+I160622 21:52:40.027326 storage/split_queue.go:97  splitting range=1 [/Min-/Max) at keys [/Table/11/0 /Table/12/0 /Table/13/0 /Table/14/0]
+I160622 21:52:40.028010 storage/replica_command.go:2127  initiating a split of range=1 [/Min-/Max) at key /Table/11
+I160622 21:52:40.031480 storage/replica_command.go:1576  range 2: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.62571418s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.031441154 +0000 UTC]
+I160622 21:52:40.031582 storage/replica_command.go:2127  initiating a split of range=2 [/Table/11-/Max) at key /Table/12
+I160622 21:52:40.037335 storage/replica_command.go:1576  range 3: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.62571418s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.037290344 +0000 UTC]
+I160622 21:52:40.037447 storage/replica_command.go:2127  initiating a split of range=3 [/Table/12-/Max) at key /Table/13
+I160622 21:52:40.053171 server/updates.go:156  No previous updates check time.
+I160622 21:52:40.069504 storage/replica_command.go:1576  range 4: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.62571418s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.069463934 +0000 UTC]
+I160622 21:52:40.069607 storage/replica_command.go:2127  initiating a split of range=4 [/Table/13-/Max) at key /Table/14
+E160622 21:52:40.115355 server/server.go:371  sql/pgwire/encoding.go:105: NUL terminator not found
+I160622 21:52:40.117368 storage/engine/rocksdb.go:143  opening in memory rocksdb instance
+W160622 21:52:40.118163 server/server.go:111  running in insecure mode, this is strongly discouraged. See --insecure.
+W160622 21:52:40.118199 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.119176 server/node.go:401  store store=0:0 ([]=) not bootstrapped
+W160622 21:52:40.120464 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.120871 storage/replica_command.go:1576  range 1: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.620242341s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.120782049 +0000 UTC]
+I160622 21:52:40.121284 server/node.go:327  **** cluster {4a7e5cf7-5fae-4c26-8ad9-46b416e76ce9} has been created
+I160622 21:52:40.121299 server/node.go:328  **** add additional nodes by specifying --join=127.0.0.1:58114
+W160622 21:52:40.121309 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.121820 server/node.go:414  initialized store store=1:1 ([]=): {Capacity:249779191808 Available:201901326336 RangeCount:0}
+I160622 21:52:40.121837 server/node.go:302  node ID 1 initialized
+I160622 21:52:40.121875 storage/stores.go:292  read 0 node addresses from persistent storage
+I160622 21:52:40.121915 server/node.go:535  connecting to gossip network to verify cluster ID...
+I160622 21:52:40.122511 server/node.go:556  node connected via gossip and verified as part of cluster {"4a7e5cf7-5fae-4c26-8ad9-46b416e76ce9"}
+I160622 21:52:40.122535 server/node.go:355  [node=1] Started node with [[]=] engine(s) and attributes []
+I160622 21:52:40.122552 server/server.go:426  starting http server at 127.0.0.1:58115
+I160622 21:52:40.122561 server/server.go:427  starting grpc/postgres server at 127.0.0.1:58114
+I160622 21:52:40.123026 storage/split_queue.go:97  splitting range=1 [/Min-/Max) at keys [/Table/11/0 /Table/12/0 /Table/13/0 /Table/14/0]
+I160622 21:52:40.123775 storage/replica_command.go:2127  initiating a split of range=1 [/Min-/Max) at key /Table/11
+I160622 21:52:40.133372 storage/replica_command.go:1576  range 2: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.721532121s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.133285244 +0000 UTC]
+I160622 21:52:40.133476 storage/replica_command.go:2127  initiating a split of range=2 [/Table/11-/Max) at key /Table/12
+I160622 21:52:40.138904 storage/replica_command.go:1576  range 3: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.721532121s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.138864093 +0000 UTC]
+I160622 21:52:40.139014 storage/replica_command.go:2127  initiating a split of range=3 [/Table/12-/Max) at key /Table/13
+I160622 21:52:40.155478 server/updates.go:156  No previous updates check time.
+I160622 21:52:40.170998 storage/replica_command.go:1576  range 4: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.721532121s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.170960023 +0000 UTC]
+I160622 21:52:40.171101 storage/replica_command.go:2127  initiating a split of range=4 [/Table/13-/Max) at key /Table/14
+E160622 21:52:40.178231 server/server.go:371  sql/pgwire/encoding.go:134: insufficient data: 0
+I160622 21:52:40.179863 storage/engine/rocksdb.go:143  opening in memory rocksdb instance
+W160622 21:52:40.180360 server/server.go:111  running in insecure mode, this is strongly discouraged. See --insecure.
+W160622 21:52:40.180385 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.181110 server/node.go:401  store store=0:0 ([]=) not bootstrapped
+W160622 21:52:40.182031 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.182283 storage/replica_command.go:1576  range 1: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.681864152s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.182225472 +0000 UTC]
+I160622 21:52:40.182529 server/node.go:327  **** cluster {469263d2-c7ea-4a08-b15a-abb90f26789d} has been created
+I160622 21:52:40.182537 server/node.go:328  **** add additional nodes by specifying --join=127.0.0.1:58123
+W160622 21:52:40.182542 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.185104 server/node.go:414  initialized store store=1:1 ([]=): {Capacity:249779191808 Available:201901326336 RangeCount:0}
+I160622 21:52:40.185134 server/node.go:302  node ID 1 initialized
+I160622 21:52:40.185185 storage/stores.go:292  read 0 node addresses from persistent storage
+I160622 21:52:40.185236 server/node.go:535  connecting to gossip network to verify cluster ID...
+I160622 21:52:40.185885 server/node.go:556  node connected via gossip and verified as part of cluster {"469263d2-c7ea-4a08-b15a-abb90f26789d"}
+I160622 21:52:40.185911 server/node.go:355  [node=1] Started node with [[]=] engine(s) and attributes []
+I160622 21:52:40.185928 server/server.go:426  starting http server at 127.0.0.1:58124
+I160622 21:52:40.185938 server/server.go:427  starting grpc/postgres server at 127.0.0.1:58123
+I160622 21:52:40.186662 storage/split_queue.go:97  splitting range=1 [/Min-/Max) at keys [/Table/11/0 /Table/12/0 /Table/13/0 /Table/14/0]
+I160622 21:52:40.187516 storage/replica_command.go:2127  initiating a split of range=1 [/Min-/Max) at key /Table/11
+I160622 21:52:40.190656 storage/replica_command.go:1576  range 2: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.782903156s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.190625509 +0000 UTC]
+I160622 21:52:40.190720 storage/replica_command.go:2127  initiating a split of range=2 [/Table/11-/Max) at key /Table/12
+I160622 21:52:40.194532 storage/replica_command.go:1576  range 3: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.782903156s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.194505814 +0000 UTC]
+I160622 21:52:40.194601 storage/replica_command.go:2127  initiating a split of range=3 [/Table/12-/Max) at key /Table/13
+I160622 21:52:40.211930 server/updates.go:156  No previous updates check time.
+I160622 21:52:40.221212 storage/replica_command.go:1576  range 4: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.782903156s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.221169434 +0000 UTC]
+I160622 21:52:40.221379 storage/replica_command.go:2127  initiating a split of range=4 [/Table/13-/Max) at key /Table/14
+I160622 21:52:40.279852 storage/engine/rocksdb.go:143  opening in memory rocksdb instance
+W160622 21:52:40.280608 server/server.go:111  running in insecure mode, this is strongly discouraged. See --insecure.
+W160622 21:52:40.280644 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.291096 server/node.go:401  store store=0:0 ([]=) not bootstrapped
+W160622 21:52:40.294577 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.296862 storage/replica_command.go:1576  range 1: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.794226431s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.296279056 +0000 UTC]
+I160622 21:52:40.304398 server/node.go:327  **** cluster {d2c5dbf5-4b36-4072-9118-51a29194119a} has been created
+I160622 21:52:40.304430 server/node.go:328  **** add additional nodes by specifying --join=127.0.0.1:58143
+W160622 21:52:40.304444 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.309898 server/node.go:414  initialized store store=1:1 ([]=): {Capacity:249779191808 Available:201901326336 RangeCount:0}
+I160622 21:52:40.309925 server/node.go:302  node ID 1 initialized
+I160622 21:52:40.309989 storage/stores.go:292  read 0 node addresses from persistent storage
+I160622 21:52:40.310052 server/node.go:535  connecting to gossip network to verify cluster ID...
+I160622 21:52:40.311431 server/node.go:556  node connected via gossip and verified as part of cluster {"d2c5dbf5-4b36-4072-9118-51a29194119a"}
+I160622 21:52:40.311464 server/node.go:355  [node=1] Started node with [[]=] engine(s) and attributes []
+I160622 21:52:40.311487 server/server.go:426  starting http server at 127.0.0.1:58144
+I160622 21:52:40.311497 server/server.go:427  starting grpc/postgres server at 127.0.0.1:58143
+I160622 21:52:40.312006 storage/split_queue.go:97  splitting range=1 [/Min-/Max) at keys [/Table/11/0 /Table/12/0 /Table/13/0 /Table/14/0]
+I160622 21:52:40.312756 storage/replica_command.go:2127  initiating a split of range=1 [/Min-/Max) at key /Table/11
+I160622 21:52:40.316884 storage/replica_command.go:1576  range 2: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.905069617s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.316838057 +0000 UTC]
+I160622 21:52:40.316994 storage/replica_command.go:2127  initiating a split of range=2 [/Table/11-/Max) at key /Table/12
+I160622 21:52:40.355409 server/updates.go:156  No previous updates check time.
+I160622 21:52:40.356292 storage/replica_command.go:1576  range 3: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.905069617s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.356253569 +0000 UTC]
+I160622 21:52:40.365566 storage/replica_command.go:2127  initiating a split of range=3 [/Table/12-/Max) at key /Table/13
+I160622 21:52:40.372830 storage/replica_command.go:1576  range 4: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.922407622s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.372784512 +0000 UTC]
+I160622 21:52:40.372935 storage/replica_command.go:2127  initiating a split of range=4 [/Table/13-/Max) at key /Table/14
+E160622 21:52:40.392681 server/server.go:371  sql/pgwire/encoding.go:105: NUL terminator not found
+I160622 21:52:40.394521 storage/engine/rocksdb.go:143  opening in memory rocksdb instance
+W160622 21:52:40.395564 server/server.go:111  running in insecure mode, this is strongly discouraged. See --insecure.
+W160622 21:52:40.395605 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.396905 server/node.go:401  store store=0:0 ([]=) not bootstrapped
+W160622 21:52:40.398316 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.398744 storage/replica_command.go:1576  range 1: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.898049749s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.398656236 +0000 UTC]
+I160622 21:52:40.399143 server/node.go:327  **** cluster {9a6c407f-010e-47d1-b182-b7d1aa3cab8c} has been created
+I160622 21:52:40.399158 server/node.go:328  **** add additional nodes by specifying --join=127.0.0.1:58153
+W160622 21:52:40.399167 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.403022 server/node.go:414  initialized store store=1:1 ([]=): {Capacity:249779191808 Available:201901326336 RangeCount:0}
+I160622 21:52:40.403048 server/node.go:302  node ID 1 initialized
+I160622 21:52:40.403115 storage/stores.go:292  read 0 node addresses from persistent storage
+I160622 21:52:40.403177 server/node.go:535  connecting to gossip network to verify cluster ID...
+I160622 21:52:40.403943 server/node.go:556  node connected via gossip and verified as part of cluster {"9a6c407f-010e-47d1-b182-b7d1aa3cab8c"}
+I160622 21:52:40.403978 server/node.go:355  [node=1] Started node with [[]=] engine(s) and attributes []
+I160622 21:52:40.403999 server/server.go:426  starting http server at 127.0.0.1:58154
+I160622 21:52:40.404010 server/server.go:427  starting grpc/postgres server at 127.0.0.1:58153
+I160622 21:52:40.404548 storage/split_queue.go:97  splitting range=1 [/Min-/Max) at keys [/Table/11/0 /Table/12/0 /Table/13/0 /Table/14/0]
+I160622 21:52:40.405353 storage/replica_command.go:2127  initiating a split of range=1 [/Min-/Max) at key /Table/11
+I160622 21:52:40.409444 storage/replica_command.go:1576  range 2: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.999383316s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.409405722 +0000 UTC]
+I160622 21:52:40.409554 storage/replica_command.go:2127  initiating a split of range=2 [/Table/11-/Max) at key /Table/12
+I160622 21:52:40.417105 storage/replica_command.go:1576  range 3: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.999383316s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.417043055 +0000 UTC]
+I160622 21:52:40.417236 storage/replica_command.go:2127  initiating a split of range=3 [/Table/12-/Max) at key /Table/13
+I160622 21:52:40.454150 server/updates.go:156  No previous updates check time.
+I160622 21:52:40.465298 storage/replica_command.go:1576  range 4: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m45.015047675s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.465273089 +0000 UTC]
+I160622 21:52:40.465363 storage/replica_command.go:2127  initiating a split of range=4 [/Table/13-/Max) at key /Table/14
+E160622 21:52:40.480102 server/server.go:371  sql/pgwire/encoding.go:105: NUL terminator not found
+I160622 21:52:40.482477 storage/engine/rocksdb.go:143  opening in memory rocksdb instance
+W160622 21:52:40.483276 server/server.go:111  running in insecure mode, this is strongly discouraged. See --insecure.
+W160622 21:52:40.483315 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.488182 server/node.go:401  store store=0:0 ([]=) not bootstrapped
+W160622 21:52:40.489581 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.489980 storage/replica_command.go:1576  range 1: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m44.989359054s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.489897749 +0000 UTC]
+I160622 21:52:40.490406 server/node.go:327  **** cluster {15cd6b09-2b6d-4652-83a2-16145f77e332} has been created
+I160622 21:52:40.490423 server/node.go:328  **** add additional nodes by specifying --join=127.0.0.1:58167
+W160622 21:52:40.490432 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.491141 server/node.go:414  initialized store store=1:1 ([]=): {Capacity:249779191808 Available:201901326336 RangeCount:0}
+I160622 21:52:40.491162 server/node.go:302  node ID 1 initialized
+I160622 21:52:40.491200 storage/stores.go:292  read 0 node addresses from persistent storage
+I160622 21:52:40.491242 server/node.go:535  connecting to gossip network to verify cluster ID...
+I160622 21:52:40.491770 server/node.go:556  node connected via gossip and verified as part of cluster {"15cd6b09-2b6d-4652-83a2-16145f77e332"}
+I160622 21:52:40.491796 server/node.go:355  [node=1] Started node with [[]=] engine(s) and attributes []
+I160622 21:52:40.491814 server/server.go:426  starting http server at 127.0.0.1:58168
+I160622 21:52:40.491823 server/server.go:427  starting grpc/postgres server at 127.0.0.1:58167
+I160622 21:52:40.492381 storage/split_queue.go:97  splitting range=1 [/Min-/Max) at keys [/Table/11/0 /Table/12/0 /Table/13/0 /Table/14/0]
+I160622 21:52:40.493373 storage/replica_command.go:2127  initiating a split of range=1 [/Min-/Max) at key /Table/11
+I160622 21:52:40.498055 storage/replica_command.go:1576  range 2: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m45.09066229s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.498013094 +0000 UTC]
+I160622 21:52:40.498162 storage/replica_command.go:2127  initiating a split of range=2 [/Table/11-/Max) at key /Table/12
+I160622 21:52:40.504427 storage/replica_command.go:1576  range 3: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m45.09066229s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.504388935 +0000 UTC]
+I160622 21:52:40.504625 storage/replica_command.go:2127  initiating a split of range=3 [/Table/12-/Max) at key /Table/13
+I160622 21:52:40.530406 server/updates.go:156  No previous updates check time.
+I160622 21:52:40.536671 storage/replica_command.go:1576  range 4: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m45.09066229s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.536644456 +0000 UTC]
+I160622 21:52:40.536739 storage/replica_command.go:2127  initiating a split of range=4 [/Table/13-/Max) at key /Table/14
+E160622 21:52:40.595509 server/server.go:371  sql/pgwire/encoding.go:143: insufficient data: 0
+I160622 21:52:40.597046 storage/engine/rocksdb.go:143  opening in memory rocksdb instance
+W160622 21:52:40.598228 server/server.go:111  running in insecure mode, this is strongly discouraged. See --insecure.
+W160622 21:52:40.598266 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.605872 server/node.go:401  store store=0:0 ([]=) not bootstrapped
+W160622 21:52:40.608654 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.609031 storage/replica_command.go:1576  range 1: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m45.108448534s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.6089398 +0000 UTC]
+I160622 21:52:40.609418 server/node.go:327  **** cluster {8a3d0d8e-ab68-4f80-ac75-4f6db1e5dd88} has been created
+I160622 21:52:40.609434 server/node.go:328  **** add additional nodes by specifying --join=127.0.0.1:58183
+W160622 21:52:40.609445 gossip/gossip.go:897  not connected to cluster; use --join to specify a connected node
+I160622 21:52:40.610138 server/node.go:414  initialized store store=1:1 ([]=): {Capacity:249779191808 Available:201901326336 RangeCount:0}
+I160622 21:52:40.610160 server/node.go:302  node ID 1 initialized
+I160622 21:52:40.610199 storage/stores.go:292  read 0 node addresses from persistent storage
+I160622 21:52:40.610239 server/node.go:535  connecting to gossip network to verify cluster ID...
+I160622 21:52:40.610866 server/node.go:556  node connected via gossip and verified as part of cluster {"8a3d0d8e-ab68-4f80-ac75-4f6db1e5dd88"}
+I160622 21:52:40.610895 server/node.go:355  [node=1] Started node with [[]=] engine(s) and attributes []
+I160622 21:52:40.610914 server/server.go:426  starting http server at 127.0.0.1:58184
+I160622 21:52:40.610924 server/server.go:427  starting grpc/postgres server at 127.0.0.1:58183
+I160622 21:52:40.611356 storage/split_queue.go:97  splitting range=1 [/Min-/Max) at keys [/Table/11/0 /Table/12/0 /Table/13/0 /Table/14/0]
+I160622 21:52:40.612014 storage/replica_command.go:2127  initiating a split of range=1 [/Min-/Max) at key /Table/11
+I160622 21:52:40.615753 storage/replica_command.go:1576  range 2: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m45.209796392s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.61571144 +0000 UTC]
+I160622 21:52:40.615858 storage/replica_command.go:2127  initiating a split of range=2 [/Table/11-/Max) at key /Table/12
+I160622 21:52:40.638529 server/updates.go:156  No previous updates check time.
+I160622 21:52:40.642938 storage/replica_command.go:1576  range 3: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m45.209796392s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.642896404 +0000 UTC]
+I160622 21:52:40.643035 storage/replica_command.go:2127  initiating a split of range=3 [/Table/12-/Max) at key /Table/13
+I160622 21:52:40.656387 storage/replica_command.go:1576  range 4: new leader lease replica {1 1 1} 1970-01-01 00:00:00 +0000 UTC 407401h52m45.209796392s following replica {0 0 0} 1970-01-01 00:00:00 +0000 UTC 0 [physicalTime=2016-06-23 01:52:40.656297663 +0000 UTC]
+I160622 21:52:40.656497 storage/replica_command.go:2127  initiating a split of range=4 [/Table/13-/Max) at key /Table/14
+panic: runtime error: makeslice: len out of range
+
+goroutine 1514 [running]:
+panic(0x54154e0, 0xc8204309e0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/runtime/panic.go:481 +0x3e6
+github.com/cockroachdb/cockroach/sql/pgwire.(*v3Conn).handleParse(0xc8203f4300, 0xb54cb38, 0xc8203f9280, 0xc8203f4328, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/sql/pgwire/v3.go:344 +0x3ac
+github.com/cockroachdb/cockroach/sql/pgwire.(*v3Conn).serve(0xc8203f4300, 0x0, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/sql/pgwire/v3.go:282 +0xfe3
+github.com/cockroachdb/cockroach/sql/pgwire.(*Server).ServeConn(0xc820961d70, 0xb553650, 0xc82023f340, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/sql/pgwire/server.go:226 +0x9d9
+github.com/cockroachdb/cockroach/server.(*Server).Start.func8.1(0xb553650, 0xc82023f340)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/server/server.go:370 +0x42
+github.com/cockroachdb/cockroach/util.(*Server).ServeWith.func1(0xc820028e60, 0xb553650, 0xc82023f340, 0xc820528050)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/net.go:131 +0x62
+created by github.com/cockroachdb/cockroach/util.(*Server).ServeWith
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/net.go:133 +0x333
+
+goroutine 1 [sleep]:
+time.Sleep(0xf4240)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/runtime/time.go:59 +0xf9
+github.com/cockroachdb/go-fuzz/examples/pgwire.Fuzz(0xb590000, 0x5, 0x200000, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/go-fuzz/examples/pgwire/main.go:89 +0x6e4
+go-fuzz-dep.Main(0x595bac0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/go-fuzz-dep/main.go:49 +0x14c
+main.main()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/go.fuzz.main/main.go:10 +0x23
+
+goroutine 17 [syscall, locked to thread]:
+runtime.goexit()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/runtime/asm_amd64.s:1998 +0x1
+
+goroutine 1480 [select]:
+github.com/cockroachdb/cockroach/server.(*Node).startGossip.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/server/node.go:571 +0x406
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004d660)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1472 [select]:
+github.com/cockroachdb/cockroach/storage.(*baseQueue).processLoop.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/queue.go:359 +0x303
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004d4e0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 19 [chan receive]:
+github.com/cockroachdb/cockroach/util/log.(*loggingT).flushDaemon(0x6204a40)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/log/clog.go:1011 +0x64
+created by github.com/cockroachdb/cockroach/util/log.init.1
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/log/clog.go:598 +0x8a
+
+goroutine 1504 [select]:
+google.golang.org/grpc/transport.(*http2Client).controller(0xc8209fc4b0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/google.golang.org/grpc/transport/http2_client.go:873 +0x5da
+created by google.golang.org/grpc/transport.newHTTP2Client
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/google.golang.org/grpc/transport/http2_client.go:201 +0x15c2
+
+goroutine 1477 [select]:
+github.com/cockroachdb/cockroach/storage.(*baseQueue).processLoop.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/queue.go:359 +0x303
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004d5c0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1449 [select]:
+github.com/cockroachdb/cockroach/gossip.(*Gossip).bootstrap.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/gossip/gossip.go:759 +0x26b
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc820916a80)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1475 [select]:
+github.com/cockroachdb/cockroach/storage.(*baseQueue).processLoop.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/queue.go:359 +0x303
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004d540)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1486 [select]:
+github.com/cockroachdb/cockroach/server.(*Server).periodicallyCheckForUpdates.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/server/updates.go:108 +0x1a2
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc820202e50)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1488 [select]:
+google.golang.org/grpc.(*Conn).transportMonitor(0xc8209fc2d0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/google.golang.org/grpc/clientconn.go:547 +0x1d3
+google.golang.org/grpc.NewConn.func1(0xc8209fc2d0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/google.golang.org/grpc/clientconn.go:355 +0x1b5
+created by google.golang.org/grpc.NewConn
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/google.golang.org/grpc/clientconn.go:356 +0x4e3
+
+goroutine 1473 [select]:
+github.com/cockroachdb/cockroach/storage.(*baseQueue).processLoop.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/queue.go:359 +0x303
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004d500)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1482 [select]:
+github.com/cockroachdb/cockroach/server.(*Server).startSampleEnvironment.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/server/server.go:556 +0x15d
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004d720)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1445 [IO wait]:
+net.runtime_pollWait(0xb545f20, 0x72, 0xb540028)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/runtime/netpoll.go:160 +0x60
+net.(*pollDesc).Wait(0xc820ac4450, 0x72, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/fd_poll_runtime.go:73 +0x3a
+net.(*pollDesc).WaitRead(0xc820ac4450, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/fd_poll_runtime.go:78 +0x36
+net.(*netFD).accept(0xc820ac43f0, 0x0, 0xb5479c0, 0xc820837840)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/fd_unix.go:426 +0x27c
+net.(*TCPListener).AcceptTCP(0xc820028e80, 0x1, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/tcpsock_posix.go:254 +0x4d
+net.(*TCPListener).Accept(0xc820028e80, 0x0, 0x0, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/tcpsock_posix.go:264 +0x3d
+net/http.(*Server).Serve(0xc820204a00, 0xb5450f8, 0xc820028e80, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/http/server.go:2117 +0x129
+github.com/cockroachdb/cockroach/server.(*Server).Start.func6()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/server/server.go:361 +0x3a
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc820916980)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1444 [chan receive]:
+github.com/cockroachdb/cockroach/server.(*Server).Start.func3()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/server/server.go:338 +0x59
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc820916960)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1447 [chan receive]:
+github.com/cockroachdb/cmux.(*muxListener).Accept(0xc8209168a0, 0x0, 0x0, 0x0, 0x0)
+	<autogenerated>:9 +0x125
+github.com/cockroachdb/cockroach/util.(*Server).ServeWith(0xc820028e60, 0xb546198, 0xc8209168a0, 0xc820528050, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/net.go:111 +0x67
+github.com/cockroachdb/cockroach/server.(*Server).Start.func8()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/server/server.go:373 +0x9b
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc8203b2540)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1463 [select]:
+github.com/cockroachdb/cockroach/storage.(*Store).startGossip.func2()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/store.go:1064 +0x3cf
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004ca80)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1448 [chan receive]:
+github.com/cockroachdb/cockroach/gossip.(*server).start.func3()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/gossip/server.go:298 +0x5c
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc820916a60)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1484 [select]:
+github.com/cockroachdb/cockroach/server.(*Node).startWriteSummaries.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/server/node.go:638 +0x35c
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004d740)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1446 [chan receive]:
+github.com/cockroachdb/cmux.(*muxListener).Accept(0xc8209168c0, 0x0, 0x0, 0x0, 0x0)
+	<autogenerated>:9 +0x125
+google.golang.org/grpc.(*Server).Serve(0xc820580240, 0xb546198, 0xc8209168c0, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/google.golang.org/grpc/server.go:281 +0x1cf
+github.com/cockroachdb/cockroach/server.(*Server).Start.func7()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/server/server.go:365 +0x46
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc8209169a0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1511 [select]:
+google.golang.org/grpc/transport.(*http2Server).controller(0xc8204bc3f0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/google.golang.org/grpc/transport/http2_server.go:660 +0x5da
+created by google.golang.org/grpc/transport.newHTTP2Server
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/google.golang.org/grpc/transport/http2_server.go:134 +0x84f
+
+goroutine 1435 [chan receive]:
+github.com/cockroachdb/cockroach/storage/engine.(*RocksDB).Open.func1(0xc82025d500)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/engine/rocksdb.go:172 +0x3a
+created by github.com/cockroachdb/cockroach/storage/engine.(*RocksDB).Open
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/engine/rocksdb.go:173 +0xa08
+
+goroutine 1440 [select]:
+github.com/cockroachdb/cockroach/sql.NewExecutor.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/sql/executor.go:253 +0x15c
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc820273a40)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1438 [select]:
+github.com/cockroachdb/cockroach/kv.(*TxnCoordSender).startStats(0xc8200de240)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/kv/txn_coord_sender.go:203 +0xd62
+github.com/cockroachdb/cockroach/kv.(*TxnCoordSender).(github.com/cockroachdb/cockroach/kv.startStats)-fm()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/kv/txn_coord_sender.go:188 +0x20
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc820587f70)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1441 [chan receive]:
+github.com/cockroachdb/cockroach/util.MakeServer.func2()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/net.go:94 +0x60
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc8209166a0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1437 [select]:
+github.com/cockroachdb/cockroach/storage.(*StorePool).start.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/store_pool.go:290 +0x23f
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc8209161a0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1471 [select]:
+github.com/cockroachdb/cockroach/storage.(*baseQueue).processLoop.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/queue.go:359 +0x303
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004d4c0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1478 [select]:
+github.com/cockroachdb/cockroach/storage.(*replicaScanner).waitAndProcess(0xc8200543f0, 0xecefd37e8, 0x24689708, 0x62039e0, 0xc8209fa740, 0xc820569960, 0xc8201fac40, 0xc82040ee98)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/scanner.go:163 +0x5ae
+github.com/cockroachdb/cockroach/storage.(*replicaScanner).scanLoop.func1.1(0xc8201fac40, 0xc820406720)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/scanner.go:209 +0x78
+github.com/cockroachdb/cockroach/storage.(*storeRangeSet).Visit(0xc820407080, 0xc82073f180)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/store.go:240 +0x279
+github.com/cockroachdb/cockroach/storage.(*replicaScanner).scanLoop.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/scanner.go:211 +0x21e
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004d5e0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1510 [IO wait]:
+net.runtime_pollWait(0xb545e60, 0x72, 0xc820326000)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/runtime/netpoll.go:160 +0x60
+net.(*pollDesc).Wait(0xc820054ed0, 0x72, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/fd_poll_runtime.go:73 +0x3a
+net.(*pollDesc).WaitRead(0xc820054ed0, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/fd_poll_runtime.go:78 +0x36
+net.(*netFD).Read(0xc820054e70, 0xc820326000, 0x8000, 0x8000, 0x0, 0xb540028, 0xc82000a078)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/fd_unix.go:250 +0x23a
+net.(*conn).Read(0xc8200282f0, 0xc820326000, 0x8000, 0x8000, 0x0, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/net.go:172 +0xe4
+github.com/cockroachdb/cmux.(*MuxConn).Read(0xc8204de210, 0xc820326000, 0x8000, 0x8000, 0x9, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cmux/cmux.go:204 +0x117
+bufio.(*Reader).fill(0xc82049e420)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/bufio/bufio.go:97 +0x33e
+bufio.(*Reader).Read(0xc82049e420, 0xc82053ce78, 0x9, 0x9, 0x9, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/bufio/bufio.go:207 +0x6a6
+io.ReadAtLeast(0xb546938, 0xc82049e420, 0xc82053ce78, 0x9, 0x9, 0x9, 0x0, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/io/io.go:297 +0x217
+io.ReadFull(0xb546938, 0xc82049e420, 0xc82053ce78, 0x9, 0x9, 0x4797d3a8ed877701, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/io/io.go:315 +0x95
+golang.org/x/net/http2.readFrameHeader(0xc82053ce78, 0x9, 0x9, 0xb546938, 0xc82049e420, 0xb000000, 0xc800000000, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/golang.org/x/net/http2/frame.go:237 +0xa5
+golang.org/x/net/http2.(*Framer).ReadFrame(0xc82053ce40, 0x0, 0x0, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/golang.org/x/net/http2/frame.go:464 +0x106
+google.golang.org/grpc/transport.(*framer).readFrame(0xc82059dcb0, 0x0, 0x0, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/google.golang.org/grpc/transport/http_util.go:417 +0x3d
+google.golang.org/grpc/transport.(*http2Server).HandleStreams(0xc8204bc3f0, 0xc82059dd40)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/google.golang.org/grpc/transport/http2_server.go:243 +0x646
+google.golang.org/grpc.(*Server).serveStreams(0xc820580240, 0xb553700, 0xc8204bc3f0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/google.golang.org/grpc/server.go:354 +0x159
+google.golang.org/grpc.(*Server).serveNewHTTP2Transport(0xc820580240, 0xb553650, 0xc8204de210, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/google.golang.org/grpc/server.go:341 +0x49d
+google.golang.org/grpc.(*Server).handleRawConn(0xc820580240, 0xb553650, 0xc8204de210)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/google.golang.org/grpc/server.go:318 +0x4ee
+created by google.golang.org/grpc.(*Server).Serve
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/google.golang.org/grpc/server.go:290 +0x38c
+
+goroutine 1483 [select]:
+github.com/cockroachdb/cockroach/ts.(*poller).start.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/ts/db.go:79 +0x150
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc820202e30)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1442 [chan receive]:
+github.com/cockroachdb/cockroach/util.MakeServer.func2()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/net.go:94 +0x60
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc820916780)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1450 [select]:
+github.com/cockroachdb/cockroach/gossip.(*Gossip).manage.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/gossip/gossip.go:796 +0x33b
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc820916aa0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1503 [IO wait]:
+net.runtime_pollWait(0xb545ce0, 0x72, 0xc8208b2000)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/runtime/netpoll.go:160 +0x60
+net.(*pollDesc).Wait(0xc82053b800, 0x72, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/fd_poll_runtime.go:73 +0x3a
+net.(*pollDesc).WaitRead(0xc82053b800, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/fd_poll_runtime.go:78 +0x36
+net.(*netFD).Read(0xc82053b7a0, 0xc8208b2000, 0x8000, 0x8000, 0x0, 0xb540028, 0xc82000a078)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/fd_unix.go:250 +0x23a
+net.(*conn).Read(0xc8200282f8, 0xc8208b2000, 0x8000, 0x8000, 0x0, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/net.go:172 +0xe4
+bufio.(*Reader).fill(0xc82013a960)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/bufio/bufio.go:97 +0x33e
+bufio.(*Reader).Read(0xc82013a960, 0xc820207d78, 0x9, 0x9, 0x9, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/bufio/bufio.go:207 +0x6a6
+io.ReadAtLeast(0xb546938, 0xc82013a960, 0xc820207d78, 0x9, 0x9, 0x9, 0x0, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/io/io.go:297 +0x217
+io.ReadFull(0xb546938, 0xc82013a960, 0xc820207d78, 0x9, 0x9, 0x4797d3a8ed877701, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/io/io.go:315 +0x95
+golang.org/x/net/http2.readFrameHeader(0xc820207d78, 0x9, 0x9, 0xb546938, 0xc82013a960, 0xb000000, 0xc800000000, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/golang.org/x/net/http2/frame.go:237 +0xa5
+golang.org/x/net/http2.(*Framer).ReadFrame(0xc820207d40, 0x0, 0x0, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/golang.org/x/net/http2/frame.go:464 +0x106
+google.golang.org/grpc/transport.(*framer).readFrame(0xc820406ea0, 0x0, 0x0, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/google.golang.org/grpc/transport/http_util.go:417 +0x3d
+google.golang.org/grpc/transport.(*http2Client).reader(0xc8209fc4b0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/google.golang.org/grpc/transport/http2_client.go:795 +0x109
+created by google.golang.org/grpc/transport.newHTTP2Client
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/google.golang.org/grpc/transport/http2_client.go:174 +0xd21
+
+goroutine 1457 [select]:
+github.com/cockroachdb/cockroach/storage.(*bookie).start.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/reservation.go:254 +0x262
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004c720)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1489 [select]:
+github.com/cockroachdb/cockroach/rpc.(*Context).runHeartbeat(0xc82025d560, 0xc820a4f130, 0xc8202de810, 0xf, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/rpc/context.go:263 +0x68d
+github.com/cockroachdb/cockroach/rpc.(*Context).GRPCDial.func1.1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/rpc/context.go:177 +0x66
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc8204078c0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1476 [select]:
+github.com/cockroachdb/cockroach/storage.(*replicaScanner).waitAndProcess(0xc820054150, 0xecefd37e8, 0x24685ca9, 0x62039e0, 0xc8209fa740, 0xc820569960, 0xc8201fac40, 0xc82040ee98)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/scanner.go:163 +0x5ae
+github.com/cockroachdb/cockroach/storage.(*replicaScanner).scanLoop.func1.1(0xc8201fac40, 0xc820406720)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/scanner.go:209 +0x78
+github.com/cockroachdb/cockroach/storage.(*storeRangeSet).Visit(0xc820406ae0, 0xc82073f100)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/store.go:240 +0x279
+github.com/cockroachdb/cockroach/storage.(*replicaScanner).scanLoop.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/scanner.go:211 +0x21e
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004d560)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1462 [select]:
+github.com/cockroachdb/cockroach/storage.(*Store).startGossip.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/store.go:1045 +0x3cf
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004ca60)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1443 [chan receive]:
+github.com/cockroachdb/cockroach/server.(*Server).Start.func2()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/server/server.go:317 +0x62
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc820916860)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1474 [select]:
+github.com/cockroachdb/cockroach/storage.(*baseQueue).processLoop.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/queue.go:359 +0x303
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004d520)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1461 [select]:
+github.com/cockroachdb/cockroach/storage.(*Store).Start.func4()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/store.go:974 +0x13d
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004ca40)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1436 [chan receive]:
+github.com/cockroachdb/cockroach/rpc.NewContext.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/rpc/context.go:109 +0x57
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc820595e00)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1439 [select]:
+github.com/cockroachdb/cockroach/sql.(*LeaseManager).RefreshLeases.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/sql/lease.go:1072 +0xfe8
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc820961aa0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1459 [select]:
+github.com/cockroachdb/cockroach/storage.(*Store).processRaft.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/store.go:2120 +0xbf1
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc820529510)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1470 [select]:
+github.com/cockroachdb/cockroach/storage.(*baseQueue).processLoop.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/queue.go:359 +0x303
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004d4a0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1479 [select]:
+github.com/cockroachdb/cockroach/server.(*Node).startComputePeriodicMetrics.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/server/node.go:604 +0x23b
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004d640)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1490 [select]:
+github.com/cockroachdb/cockroach/storage.(*idAllocator).start.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/id_alloc.go:123 +0x86a
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc8202037c0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1451 [select]:
+github.com/cockroachdb/cockroach/storage.(*bookie).start.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/storage/reservation.go:254 +0x262
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc820916dc0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1485 [select]:
+github.com/cockroachdb/cockroach/sql.(*SchemaChangeManager).Start.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/sql/schema_changer.go:641 +0x1762
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004d760)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+
+goroutine 1487 [IO wait]:
+net.runtime_pollWait(0xb545fe0, 0x72, 0xb540028)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/runtime/netpoll.go:160 +0x60
+net.(*pollDesc).Wait(0xc820ac43e0, 0x72, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/fd_poll_runtime.go:73 +0x3a
+net.(*pollDesc).WaitRead(0xc820ac43e0, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/fd_poll_runtime.go:78 +0x36
+net.(*netFD).accept(0xc820ac4380, 0x0, 0xb5479c0, 0xc820916e40)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/fd_unix.go:426 +0x27c
+net.(*TCPListener).AcceptTCP(0xc820028e68, 0xc8208c7ed8, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/tcpsock_posix.go:254 +0x4d
+net.(*TCPListener).Accept(0xc820028e68, 0x0, 0x0, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/net/tcpsock_posix.go:264 +0x3d
+github.com/cockroachdb/cmux.(*cMux).Serve(0xc8209fb400, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cmux/cmux.go:110 +0x9d
+github.com/cockroachdb/cockroach/server.(*Server).Start.func11()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/server/server.go:433 +0x32
+github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker.func1(0xc820569960, 0xc82004d780)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:139 +0x52
+created by github.com/cockroachdb/cockroach/util/stop.(*Stopper).RunWorker
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build368304354/src/github.com/cockroachdb/cockroach/util/stop/stopper.go:140 +0x62
+exit status 2
