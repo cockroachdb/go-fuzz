@@ -15,18 +15,13 @@ func init() {
 	spew.Config.DisableMethods = true
 }
 
-type visitorFunc func(parser.Expr) parser.Expr
-
-func (v visitorFunc) Visit(e parser.Expr) parser.Expr {
-	return v(e)
-}
-
 // Fuzz is the entry point for go-fuzz. Run it via
 //	  go-fuzz-build github.com/cockroachdb/go-fuzz/examples/parser && \
 //    go-fuzz -bin=./parser-fuzz.zip -workdir=.
 func Fuzz(data []byte) (interestingness int) {
 	sql := string(data)
-	stmts, err := parser.Parse(sql)
+	var p parser.Parser
+	stmts, err := p.Parse(sql, parser.Traditional)
 	if err != nil || stmts == nil {
 		if stmts != nil {
 			panic("stmt is not nil on error")
@@ -94,7 +89,7 @@ func fuzzSingle(stmt parser.Statement) (interestingness int) {
 	if strings.Contains(data0, "%!s(<nil>)") {
 		return 0
 	}
-	stmt1, err := parser.Parse(data0)
+	stmt1, err := parser.ParseOneTraditional(data0)
 	if err != nil {
 		fmt.Printf("AST: %s", spew.Sdump(stmt))
 		fmt.Printf("data0: %q\n", data0)
@@ -112,14 +107,5 @@ func fuzzSingle(stmt parser.Statement) (interestingness int) {
 		fmt.Printf("AST: %s", spew.Sdump(stmt1))
 		panic("not equal")
 	}
-
-	var v visitorFunc = func(e parser.Expr) parser.Expr {
-		lastExpr = e
-		if _, err := parser.EvalExpr(e); err != nil {
-			panic(err)
-		}
-		return e
-	}
-	parser.WalkStmt(v, stmt)
 	return
 }

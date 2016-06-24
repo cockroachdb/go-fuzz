@@ -1,0 +1,8 @@
+panic: not equal [recovered]
+panic
+github.com/cockroachdb/go-fuzz/examples/parser.fuzzSingle.func1
+panic
+github.com/cockroachdb/go-fuzz/examples/parser.fuzzSingle
+github.com/cockroachdb/go-fuzz/examples/parser.Fuzz
+go-fuzz-dep.Main
+main.main

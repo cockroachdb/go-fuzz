@@ -1,0 +1,107 @@
+AST: (*parser.Set)(0xc820215620)({
+ Name: (*parser.QualifiedName)(0xc8201b46c0)({
+  Base: (parser.Name) (len=1) "_",
+  Indirect: (parser.Indirection) <nil>,
+  normalized: (parser.nameType) 0,
+  origString: (string) (len=1) "_"
+ }),
+ Values: (parser.Exprs) (len=1 cap=1) {
+  (*parser.NumVal)(0xc82005eae0)({
+   Value: (constant.floatVal) {
+    val: (*big.Float)(0xc820200600)({
+     prec: (uint32) 512,
+     mode: (big.RoundingMode) 0,
+     acc: (big.Accuracy) 0,
+     form: (big.form) 2,
+     neg: (bool) true,
+     mant: (big.nat) <nil>,
+     exp: (int32) 0
+    })
+   },
+   OrigString: (string) "",
+   resInt: (parser.DInt) 0,
+   resFloat: (parser.DFloat) 0,
+   resDecimal: (parser.DDecimal) {
+    Dec: (inf.Dec) {
+     unscaled: (big.Int) {
+      neg: (bool) false,
+      abs: (big.nat) <nil>
+     },
+     scale: (inf.Scale) 0
+    }
+   }
+  })
+ }
+})
+data0: "SET _ = -Inf"
+Stmt: SET _ = -Inf
+(*parser.Set)(0xc820215620)({
+ Name: (*parser.QualifiedName)(0xc8201b46c0)({
+  Base: (parser.Name) (len=1) "_",
+  Indirect: (parser.Indirection) <nil>,
+  normalized: (parser.nameType) 0,
+  origString: (string) (len=1) "_"
+ }),
+ Values: (parser.Exprs) (len=1 cap=1) {
+  (*parser.NumVal)(0xc82005eae0)({
+   Value: (constant.floatVal) {
+    val: (*big.Float)(0xc820200600)({
+     prec: (uint32) 512,
+     mode: (big.RoundingMode) 0,
+     acc: (big.Accuracy) 0,
+     form: (big.form) 2,
+     neg: (bool) true,
+     mant: (big.nat) <nil>,
+     exp: (int32) 0
+    })
+   },
+   OrigString: (string) "",
+   resInt: (parser.DInt) 0,
+   resFloat: (parser.DFloat) 0,
+   resDecimal: (parser.DDecimal) {
+    Dec: (inf.Dec) {
+     unscaled: (big.Int) {
+      neg: (bool) false,
+      abs: (big.nat) <nil>
+     },
+     scale: (inf.Scale) 0
+    }
+   }
+  })
+ }
+})
+panic: syntax error at or near "Inf"
+SET _ = -Inf
+         ^
+ [recovered]
+	panic: syntax error at or near "Inf"
+SET _ = -Inf
+         ^
+
+
+goroutine 1 [running]:
+panic(0x4a3f200, 0xc8202156e0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/runtime/panic.go:481 +0x3e6
+github.com/cockroachdb/go-fuzz/examples/parser.fuzzSingle.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/github.com/cockroachdb/go-fuzz/examples/parser/main.go:76 +0x542
+panic(0x4a3f200, 0xc8202156e0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/runtime/panic.go:443 +0x4e9
+github.com/cockroachdb/go-fuzz/examples/parser.fuzzSingle(0x59872a0, 0xc820215620, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/github.com/cockroachdb/go-fuzz/examples/parser/main.go:96 +0x486
+github.com/cockroachdb/go-fuzz/examples/parser.Fuzz(0x5d10000, 0x12, 0x200000, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/github.com/cockroachdb/go-fuzz/examples/parser/main.go:32 +0x16b
+go-fuzz-dep.Main(0x4d60228)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/go-fuzz-dep/main.go:49 +0x14c
+main.main()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/go.fuzz.main/main.go:10 +0x23
+
+goroutine 17 [syscall, locked to thread]:
+runtime.goexit()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/runtime/asm_amd64.s:1998 +0x1
+
+goroutine 5 [chan receive]:
+github.com/cockroachdb/cockroach/util/log.(*loggingT).flushDaemon(0x50b91c0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/github.com/cockroachdb/cockroach/util/log/clog.go:1011 +0x64
+created by github.com/cockroachdb/cockroach/util/log.init.1
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/github.com/cockroachdb/cockroach/util/log/clog.go:598 +0x8a
+exit status 2

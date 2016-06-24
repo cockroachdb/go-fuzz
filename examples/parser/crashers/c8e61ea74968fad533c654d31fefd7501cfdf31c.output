@@ -1,0 +1,201 @@
+data0: "SET I = -9.88131e-324"
+AST: (*parser.Set)(0xc82029af80)({
+ Name: (*parser.QualifiedName)(0xc8202a0440)({
+  Base: (parser.Name) (len=1) "I",
+  Indirect: (parser.Indirection) <nil>,
+  normalized: (parser.nameType) 0,
+  origString: (string) (len=1) "I"
+ }),
+ Values: (parser.Exprs) (len=1 cap=1) {
+  (*parser.NumVal)(0xc820192cc0)({
+   Value: (constant.ratVal) {
+    val: (*big.Rat)(0xc8202a0500)({
+     a: (big.Int) {
+      neg: (bool) true,
+      abs: (big.nat) (len=1 cap=5) {
+       (big.Word) 0x1
+      }
+     },
+     b: (big.Int) {
+      neg: (bool) false,
+      abs: (big.nat) (len=17 cap=21) {
+       (big.Word) <nil>,
+       (big.Word) <nil>,
+       (big.Word) <nil>,
+       (big.Word) <nil>,
+       (big.Word) <nil>,
+       (big.Word) 0xb60776a2e3bd7be8,
+       (big.Word) 0x3e9d9fb3b0ec76ec,
+       (big.Word) 0xc8085b03bb5d8644,
+       (big.Word) 0x43c163cdaf6d19fe,
+       (big.Word) 0xa94bcf7017099d02,
+       (big.Word) 0x8fb5cee0e1a27f9b,
+       (big.Word) 0x4093db83ac44ef2f,
+       (big.Word) 0x5f5127b3b5adac31,
+       (big.Word) 0x626efcc1af4349cf,
+       (big.Word) 0xaf6a840f8643c29c,
+       (big.Word) 0x58848ce53c07bb3d,
+       (big.Word) 0x1f9ec583bdc70
+      }
+     }
+    })
+   },
+   OrigString: (string) "",
+   resInt: (parser.DInt) 0,
+   resFloat: (parser.DFloat) 0,
+   resDecimal: (parser.DDecimal) {
+    Dec: (inf.Dec) {
+     unscaled: (big.Int) {
+      neg: (bool) false,
+      abs: (big.nat) <nil>
+     },
+     scale: (inf.Scale) 0
+    }
+   }
+  })
+ }
+})
+data1: "SET I = -4.94066e-324"
+AST: (*parser.Set)(0xc82029b0e0)({
+ Name: (*parser.QualifiedName)(0xc8202a0540)({
+  Base: (parser.Name) (len=1) "I",
+  Indirect: (parser.Indirection) <nil>,
+  normalized: (parser.nameType) 0,
+  origString: (string) (len=1) "I"
+ }),
+ Values: (parser.Exprs) (len=1 cap=1) {
+  (*parser.NumVal)(0xc820192ea0)({
+   Value: (constant.ratVal) {
+    val: (*big.Rat)(0xc8202a0600)({
+     a: (big.Int) {
+      neg: (bool) true,
+      abs: (big.nat) (len=1 cap=5) {
+       (big.Word) 0xf13e3
+      }
+     },
+     b: (big.Int) {
+      neg: (bool) false,
+      abs: (big.nat) (len=18 cap=22) {
+       (big.Word) <nil>,
+       (big.Word) <nil>,
+       (big.Word) <nil>,
+       (big.Word) <nil>,
+       (big.Word) <nil>,
+       (big.Word) 0x61feff8a0be8ca00,
+       (big.Word) 0xa61b9e6429a56c8b,
+       (big.Word) 0x7ec5b1b7d1fed470,
+       (big.Word) 0xa521420a81e7e7c1,
+       (big.Word) 0x6001b867003ce5d,
+       (big.Word) 0xebf6eae9c7a4f401,
+       (big.Word) 0x2045eb5edaaf7a97,
+       (big.Word) 0x140de6f148b287a0,
+       (big.Word) 0x842648c7d00802c,
+       (big.Word) 0xd95e2777046bcfa,
+       (big.Word) 0x8ee4d73cf8d1fde3,
+       (big.Word) 0x27c69557686142ac,
+       (big.Word) 0x1e
+      }
+     }
+    })
+   },
+   OrigString: (string) "",
+   resInt: (parser.DInt) 0,
+   resFloat: (parser.DFloat) 0,
+   resDecimal: (parser.DDecimal) {
+    Dec: (inf.Dec) {
+     unscaled: (big.Int) {
+      neg: (bool) false,
+      abs: (big.nat) <nil>
+     },
+     scale: (inf.Scale) 0
+    }
+   }
+  })
+ }
+})
+Stmt: SET I = -9.88131e-324
+(*parser.Set)(0xc82029af80)({
+ Name: (*parser.QualifiedName)(0xc8202a0440)({
+  Base: (parser.Name) (len=1) "I",
+  Indirect: (parser.Indirection) <nil>,
+  normalized: (parser.nameType) 0,
+  origString: (string) (len=1) "I"
+ }),
+ Values: (parser.Exprs) (len=1 cap=1) {
+  (*parser.NumVal)(0xc820192cc0)({
+   Value: (constant.ratVal) {
+    val: (*big.Rat)(0xc8202a0500)({
+     a: (big.Int) {
+      neg: (bool) true,
+      abs: (big.nat) (len=1 cap=5) {
+       (big.Word) 0x1
+      }
+     },
+     b: (big.Int) {
+      neg: (bool) false,
+      abs: (big.nat) (len=17 cap=21) {
+       (big.Word) <nil>,
+       (big.Word) <nil>,
+       (big.Word) <nil>,
+       (big.Word) <nil>,
+       (big.Word) <nil>,
+       (big.Word) 0xb60776a2e3bd7be8,
+       (big.Word) 0x3e9d9fb3b0ec76ec,
+       (big.Word) 0xc8085b03bb5d8644,
+       (big.Word) 0x43c163cdaf6d19fe,
+       (big.Word) 0xa94bcf7017099d02,
+       (big.Word) 0x8fb5cee0e1a27f9b,
+       (big.Word) 0x4093db83ac44ef2f,
+       (big.Word) 0x5f5127b3b5adac31,
+       (big.Word) 0x626efcc1af4349cf,
+       (big.Word) 0xaf6a840f8643c29c,
+       (big.Word) 0x58848ce53c07bb3d,
+       (big.Word) 0x1f9ec583bdc70
+      }
+     }
+    })
+   },
+   OrigString: (string) "",
+   resInt: (parser.DInt) 0,
+   resFloat: (parser.DFloat) 0,
+   resDecimal: (parser.DDecimal) {
+    Dec: (inf.Dec) {
+     unscaled: (big.Int) {
+      neg: (bool) false,
+      abs: (big.nat) <nil>
+     },
+     scale: (inf.Scale) 0
+    }
+   }
+  })
+ }
+})
+panic: not equal [recovered]
+	panic: not equal
+
+goroutine 1 [running]:
+panic(0x4872ae0, 0xc8202c6920)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/runtime/panic.go:481 +0x3e6
+github.com/cockroachdb/go-fuzz/examples/parser.fuzzSingle.func1()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/github.com/cockroachdb/go-fuzz/examples/parser/main.go:76 +0x542
+panic(0x4872ae0, 0xc8202c6920)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/runtime/panic.go:443 +0x4e9
+github.com/cockroachdb/go-fuzz/examples/parser.fuzzSingle(0x5980218, 0xc82029af80, 0x2)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/github.com/cockroachdb/go-fuzz/examples/parser/main.go:108 +0xb1a
+github.com/cockroachdb/go-fuzz/examples/parser.Fuzz(0x5d10000, 0xd, 0x200000, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/github.com/cockroachdb/go-fuzz/examples/parser/main.go:32 +0x16b
+go-fuzz-dep.Main(0x4d60228)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/go-fuzz-dep/main.go:49 +0x14c
+main.main()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/go.fuzz.main/main.go:10 +0x23
+
+goroutine 17 [syscall, locked to thread]:
+runtime.goexit()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/runtime/asm_amd64.s:1998 +0x1
+
+goroutine 19 [chan receive]:
+github.com/cockroachdb/cockroach/util/log.(*loggingT).flushDaemon(0x50b91c0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/github.com/cockroachdb/cockroach/util/log/clog.go:1011 +0x64
+created by github.com/cockroachdb/cockroach/util/log.init.1
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/github.com/cockroachdb/cockroach/util/log/clog.go:598 +0x8a
+exit status 2
