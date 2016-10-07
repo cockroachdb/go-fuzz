@@ -1,9 +1,0 @@
-panic: runtime error: index out of range
-panic
-github.com/cockroachdb/cockroach/sql/pgwire.(*readBuffer).getPrepareType
-github.com/cockroachdb/cockroach/sql/pgwire.(*v3Conn).handleClose
-github.com/cockroachdb/cockroach/sql/pgwire.(*v3Conn).serve
-github.com/cockroachdb/cockroach/sql/pgwire.(*Server).ServeConn
-github.com/cockroachdb/cockroach/server.(*Server).Start.func8.1
-github.com/cockroachdb/cockroach/util.(*Server).ServeWith.func1
-created by github.com/cockroachdb/cockroach/util.
