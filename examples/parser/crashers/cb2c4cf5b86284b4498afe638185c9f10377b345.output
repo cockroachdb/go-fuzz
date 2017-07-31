@@ -1,0 +1,99 @@
+program hanged (timeout 10 seconds)
+
+SIGABRT: abort
+PC=0x441546d m=0
+
+goroutine 1 [running]:
+math/big.addVV(0xc8226aa940, 0x150, 0x3c7edc, 0xc8226aa940, 0x3c7ed8, 0x3c7edc, 0xc8226ace00, 0x3c7a40, 0x3c7a44, 0x3c7b40, ...)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/math/big/arith_amd64.s:59 +0x3d fp=0xc820274760 sp=0xc820274758
+math/big.karatsubaAdd(0xc8226aa940, 0x3c7ed8, 0x3c7edc, 0xc8226ace00, 0x3c7a40, 0x3c7a44, 0x150)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/math/big/nat.go:243 +0xce fp=0xc8202747e8 sp=0xc820274760
+math/big.karatsuba(0xc8226aa400, 0x3c7f80, 0x3c7f84, 0xc8215ec200, 0x150, 0x1e3fc4, 0xc8215ec200, 0x150, 0x1e3fc4)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/math/big/nat.go:350 +0x894 fp=0xc820274960 sp=0xc8202747e8
+math/big.karatsuba(0xc8226aa400, 0x3c7f80, 0x3c7f84, 0xc8215ec200, 0x2a0, 0x1e3fc4, 0xc8215ec200, 0x2a0, 0x1e3fc4)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/math/big/nat.go:314 +0x251 fp=0xc820274ad8 sp=0xc820274960
+math/big.karatsuba(0xc8226aa400, 0x3c7f80, 0x3c7f84, 0xc8215ec200, 0x540, 0x1e3fc4, 0xc8215ec200, 0x540, 0x1e3fc4)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/math/big/nat.go:314 +0x251 fp=0xc820274c50 sp=0xc820274ad8
+math/big.karatsuba(0xc8226a5000, 0x3c8a00, 0x3c8a04, 0xc8215e9800, 0xa80, 0x1e4504, 0xc8215e9800, 0xa80, 0x1e4504)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/math/big/nat.go:315 +0x300 fp=0xc820274dc8 sp=0xc820274c50
+math/big.karatsuba(0xc8226a5000, 0x3c8a00, 0x3c8a04, 0xc8215e9800, 0x1500, 0x1e4504, 0xc8215e9800, 0x1500, 0x1e4504)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/math/big/nat.go:314 +0x251 fp=0xc820274f40 sp=0xc820274dc8
+math/big.karatsuba(0xc822690000, 0x3cb400, 0x3cb404, 0xc8215df000, 0x2a00, 0x1e5a04, 0xc8215df000, 0x2a00, 0x1e5a04)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/math/big/nat.go:315 +0x300 fp=0xc8202750b8 sp=0xc820274f40
+math/big.karatsuba(0xc822666000, 0x3d0800, 0x3d0804, 0xc8215ca000, 0x5400, 0x1e8404, 0xc8215ca000, 0x5400, 0x1e8404)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/math/big/nat.go:315 +0x300 fp=0xc820275230 sp=0xc8202750b8
+math/big.karatsuba(0xc822612000, 0x3db000, 0x3db004, 0xc8215a0000, 0xa800, 0x1ed804, 0xc8215a0000, 0xa800, 0x1ed804)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/math/big/nat.go:315 +0x300 fp=0xc8202753a8 sp=0xc820275230
+math/big.karatsuba(0xc82256a000, 0x3f0000, 0x3f0004, 0xc82154c000, 0x15000, 0x1f8004, 0xc82154c000, 0x15000, 0x1f8004)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/math/big/nat.go:315 +0x300 fp=0xc820275520 sp=0xc8202753a8
+math/big.karatsuba(0xc82256a000, 0x3f0000, 0x3f0004, 0xc82154c000, 0x2a000, 0x1f8004, 0xc82154c000, 0x2a000, 0x1f8004)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/math/big/nat.go:314 +0x251 fp=0xc820275698 sp=0xc820275520
+math/big.karatsuba(0xc82256a000, 0x3f0000, 0x3f0004, 0xc82154c000, 0x54000, 0x1f8004, 0xc82154c000, 0x54000, 0x1f8004)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/math/big/nat.go:314 +0x251 fp=0xc820275810 sp=0xc820275698
+math/big.karatsuba(0xc82256a000, 0x3f0000, 0x3f0004, 0xc82154c000, 0xa8000, 0x1f8004, 0xc82154c000, 0xa8000, 0x1f8004)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/math/big/nat.go:314 +0x251 fp=0xc820275988 sp=0xc820275810
+math/big.nat.mul(0xc82256a000, 0x3f0000, 0x3f0004, 0xc82154c000, 0xabc6a, 0x1f8004, 0xc82154c000, 0xabc6a, 0x1f8004, 0x0, ...)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/math/big/nat.go:438 +0x78c fp=0xc820275ad0 sp=0xc820275988
+math/big.nat.expNN(0xc82154c000, 0xabc6a, 0x1f8004, 0x5055418, 0x1, 0x1, 0xc82031dd10, 0x1, 0x5, 0x0, ...)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/math/big/nat.go:953 +0xc18 fp=0xc820275c20 sp=0xc820275ad0
+math/big.(*Rat).SetString(0xc8203139c0, 0xc82017363b, 0xc, 0xc82031dce0, 0xc820515001)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/math/big/ratconv.go:101 +0xf09 fp=0xc820275d80 sp=0xc820275c20
+go/constant.makeFloatFromLiteral(0xc82017363b, 0xc, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/go/constant/value.go:254 +0x176 fp=0xc820275dc0 sp=0xc820275d80
+go/constant.MakeFromLiteral(0xc82017363b, 0xc, 0x6, 0x0, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/go/constant/value.go:329 +0x579 fp=0xc820275f80 sp=0xc820275dc0
+github.com/cockroachdb/cockroach/sql/parser.(*scanner).scanNumber(0xc820326a00, 0xc820326ad8, 0x30)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/github.com/cockroachdb/cockroach/sql/parser/scan.go:578 +0x4d1 fp=0xc820276040 sp=0xc820275f80
+github.com/cockroachdb/cockroach/sql/parser.(*scanner).scan(0xc820326a00, 0xc820326ad8)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/github.com/cockroachdb/cockroach/sql/parser/scan.go:368 +0x514 fp=0xc8202760c0 sp=0xc820276040
+github.com/cockroachdb/cockroach/sql/parser.(*scanner).Lex(0xc820326a00, 0xc820326ad8, 0xc800000001)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/github.com/cockroachdb/cockroach/sql/parser/scan.go:83 +0x28f fp=0xc8202760e0 sp=0xc8202760c0
+github.com/cockroachdb/cockroach/sql/parser.sqllex1(0x5988ef0, 0xc820326a00, 0xc820326ad8, 0xc8202821f0, 0x0)
+	yaccpar:119 +0x52 fp=0xc820276188 sp=0xc8202760e0
+github.com/cockroachdb/cockroach/sql/parser.(*sqlParserImpl).Parse(0xc820326ad8, 0x5988ef0, 0xc820326a00, 0x0)
+	yaccpar:204 +0x65c7c fp=0xc820285d10 sp=0xc820276188
+github.com/cockroachdb/cockroach/sql/parser.(*Parser).Parse(0xc820326a00, 0xc820173630, 0x45, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/github.com/cockroachdb/cockroach/sql/parser/parse.go:80 +0x132 fp=0xc820285d78 sp=0xc820285d10
+github.com/cockroachdb/go-fuzz/examples/parser.Fuzz(0x5d10000, 0x45, 0x200000, 0x0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/github.com/cockroachdb/go-fuzz/examples/parser/main.go:24 +0xae fp=0xc820285e60 sp=0xc820285d78
+go-fuzz-dep.Main(0x4d60228)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/go-fuzz-dep/main.go:49 +0x14c fp=0xc820285f00 sp=0xc820285e60
+main.main()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/go.fuzz.main/main.go:10 +0x23 fp=0xc820285f10 sp=0xc820285f00
+runtime.main()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/runtime/proc.go:188 +0x2b0 fp=0xc820285f60 sp=0xc820285f10
+runtime.goexit()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/runtime/asm_amd64.s:1998 +0x1 fp=0xc820285f68 sp=0xc820285f60
+
+goroutine 17 [syscall, locked to thread]:
+runtime.goexit()
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/runtime/asm_amd64.s:1998 +0x1
+
+goroutine 5 [chan receive]:
+github.com/cockroachdb/cockroach/util/log.(*loggingT).flushDaemon(0x50b91c0)
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/github.com/cockroachdb/cockroach/util/log/clog.go:1011 +0x64
+created by github.com/cockroachdb/cockroach/util/log.init.1
+	/var/folders/pj/99_s_zrd5tx0fv6pkqjzstkw0000gn/T/go-fuzz-build032812301/src/github.com/cockroachdb/cockroach/util/log/clog.go:598 +0x8a
+
+rax    0x2a0
+rbx    0x3c7a44
+rcx    0x0
+rdx    0xc8226aa400
+rdi    0x144
+rsi    0x8
+rbp    0x14
+rsp    0xc820274758
+r8     0xc8226aa940
+r9     0xc8226ace00
+r10    0xc8226aa940
+r11    0x0
+r12    0x0
+r13    0x0
+r14    0x0
+r15    0x8
+rip    0x441546d
+rflags 0x246
+cs     0x2b
+fs     0x0
+gs     0x0
+exit status 2
